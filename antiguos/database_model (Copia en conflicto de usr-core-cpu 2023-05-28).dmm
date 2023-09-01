@@ -1,0 +1,3826 @@
+{
+	"tables": {
+		"7019ae48-c3d6-42fa-96dc-e8d138ec745f": {
+			"id": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"visible": true,
+			"name": "producto_id",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "54004df9-3f04-4a9f-9ec1-3c338f13c471",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "64",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "e37435a7-82b8-4cf5-8c97-47bd5e989ea8",
+					"name": "activo",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "9f9cdfe0-d754-484d-980c-eff246678331",
+					"name": "peso",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "0",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "5339046b-a9f0-497b-9ca6-8cccd5f5e966",
+					"name": "es_refrigerado",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "15a37ab6-2e48-45e3-914a-307d08c894c7",
+					"name": "unidades",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "e0cb60af-6112-414d-8c92-2f4b6917fad4",
+					"name": "unidad_medida_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"fk": true,
+					"binary": false
+				},
+				{
+					"id": "83a5bb4e-9ca4-492a-a292-09454b69556c",
+					"name": "laboratorio_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "a047a59d-0855-4ec8-8bef-8ebae9f671ab",
+					"name": "famila_productos_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"fk": true,
+					"after": "",
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "abd3c521-dd32-43eb-a922-c8521e432f09",
+					"name": "multiplicador_hijo",
+					"datatype": "TINYINT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "c5c99c37-d8c0-4b7c-b11b-e02c97e9100b",
+					"name": "producto_hijo_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false,
+					"fk": true
+				},
+				{
+					"id": "c51cf1b0-aa56-41f2-82b4-e6400c89f038",
+					"name": "forma_farmaceutica_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"fk": true,
+					"after": "",
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "1d918e98-9814-4870-a4f7-33875ff2ffcc",
+					"name": "stock_minimo",
+					"datatype": "TINYINT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "b300070b-2535-46d5-b4ff-81a4d3ea537e",
+					"name": "stock_maximo",
+					"datatype": "TINYINT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "8d9c4c8f-da7a-44a8-ad45-02db96c3c88c",
+					"name": "no_comprar",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"75312aa8-b3ae-4fe0-b2c8-c6c779d1aae3",
+				"6267c7b8-d1c5-40c4-b23b-d2f7bbd760c6",
+				"9c809986-b917-4138-b181-94c1f76c2be1",
+				"d9bba9d3-c407-4bb3-a93d-0eba7c8fb6ca",
+				"18616617-d1d3-4d0c-a771-e0fe46cf2ce7",
+				"2bc79418-c1f0-4638-8d28-12db4712c8a9",
+				"5e4cc18e-7658-4080-9925-4e0409091138",
+				"5cd1c8e3-4d22-451a-a5f6-19b118b11f4b",
+				"3887f8f0-e3fb-4f4a-b2cf-5f6f1efe1c7e",
+				"0d6ba9bb-dd06-41b0-8989-16cbc62b2c7d",
+				"ed6e9a5b-629e-43f0-bb30-b542cf576be3",
+				"4b70e5e5-5f15-41c5-894f-39c3b7456145"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "fcbca80d-6da1-4bb4-86ee-9d2943209f29",
+							"colid": "1f661bb2-0a65-4720-b1cc-725bbbf38258"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "7c94eb42-8edd-4422-b447-03573b7463fa",
+					"name": "producto_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "5c721fd9-6ba1-4cf9-ba65-5021dbc0cbf9",
+							"colid": "54004df9-3f04-4a9f-9ec1-3c338f13c471"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"d45836ef-166f-4d0b-9cd1-7e7ea29626a9": {
+			"id": "d45836ef-166f-4d0b-9cd1-7e7ea29626a9",
+			"visible": true,
+			"name": "documento",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "52d6a380-6019-4a19-bb70-b57bab5c717b",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"after": "",
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "4c974371-8713-4520-870c-8e227fab4c81",
+					"name": "fecha_hora",
+					"datatype": "TIMESTAMP",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "now()",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "c9360954-c2cb-4033-9619-ca1c8710cab5",
+					"name": "usuario_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "064f0111-2c41-4214-8da3-19226dcda7a1",
+					"name": "tipo_pago_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "c2eb6aab-ab69-41f1-bbea-2d91b6b0ba6c",
+					"name": "tipo_documento_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"f8835a0b-9f30-4c6e-9777-faa98fe12cf2",
+				"60d004d9-9049-491d-9110-452b8af3d4a3",
+				"aed980e0-82c7-49c8-ab2a-6d2c2df143b2",
+				"6ec67c72-5657-497d-9c81-5f04aa27f135"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "5484c6d3-22b5-4f4c-b216-4809e601f950",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "a32c513f-8a37-423f-ae2b-680395d25dbc",
+							"colid": "52d6a380-6019-4a19-bb70-b57bab5c717b"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"aa13634f-e8bf-4fc1-95d0-ede4ba71781b": {
+			"id": "aa13634f-e8bf-4fc1-95d0-ede4ba71781b",
+			"visible": true,
+			"name": "codigo_barras",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "0bf9b866-ec6e-487e-bafa-09805cbb579f",
+					"name": "codigo_barra",
+					"datatype": "VARCHAR",
+					"param": "16",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "c9cc1313-35b8-41e3-b86d-01b5fc78c4ab",
+					"name": "producto_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"fk": true,
+					"binary": false
+				}
+			],
+			"relations": [
+				"6267c7b8-d1c5-40c4-b23b-d2f7bbd760c6",
+				"2f80d6a5-4390-4866-96c5-6b6b4b1c4906"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "d46b0370-e604-49be-8f73-05b67df17a09",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "9b58bf68-bb9e-4201-8d2a-36995326f950",
+							"colid": "0bf9b866-ec6e-487e-bafa-09805cbb579f"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "5b75a04d-07f7-4e56-819c-387755f071f8",
+					"name": "codigos_barra_ix_1",
+					"unique": true,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "eeeb3cb3-bc34-42d6-8f5e-6f8d051fce19",
+							"colid": "0bf9b866-ec6e-487e-bafa-09805cbb579f"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"ea17de24-bc3b-4726-b83e-a71385c4c374": {
+			"id": "ea17de24-bc3b-4726-b83e-a71385c4c374",
+			"visible": true,
+			"name": "detalle",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "9750e1fa-dc71-403b-8623-5da7149ca9b1",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": false,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "03e08a6f-523a-4d20-a26c-7357d4c20a81",
+					"name": "boleta_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"fk": true,
+					"after": "",
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "8efdc89e-dddc-46cf-acf0-4f19f532838b",
+					"name": "producto_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"fk": true,
+					"binary": false
+				},
+				{
+					"id": "3bee613c-53e6-4289-8d9a-5a2a272863aa",
+					"name": "ordinal",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "59ae4bd3-821b-46b5-9c90-5fefc4f7760b",
+					"name": "precio_original",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "1ae48340-3fac-4b77-b793-cd3a6a9e8291",
+					"name": "precio_venta",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "2c44b350-8b37-4285-aba2-c8c4c06a233e",
+					"name": "movimientos_id",
+					"datatype": "TIMESTAMP",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "7cbf22e4-59eb-4929-8590-679c934bb28c",
+					"name": "codigo_barras",
+					"datatype": "VARCHAR",
+					"param": "16",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "67fc7658-b71a-41c7-913a-da21bb636272",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "64",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"f8835a0b-9f30-4c6e-9777-faa98fe12cf2",
+				"75312aa8-b3ae-4fe0-b2c8-c6c779d1aae3",
+				"59f144d9-e08d-4e85-9f8c-a3df5a51c716"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "7d0b3e1b-9155-420e-a313-e0ebd713710f",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "95c22036-d25c-4619-b4f4-317716af1e11",
+							"colid": "9750e1fa-dc71-403b-8623-5da7149ca9b1"
+						},
+						{
+							"id": "414f643b-09b8-45f5-b6d4-07f1e4642b50",
+							"colid": "03e08a6f-523a-4d20-a26c-7357d4c20a81"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "320ed42e-48c0-4341-ba94-c616d9d5fdc3",
+					"name": "detalle_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "1ecf82ba-a995-46b4-98eb-8fb68ff7f4ba",
+							"colid": "8efdc89e-dddc-46cf-acf0-4f19f532838b"
+						}
+					]
+				},
+				{
+					"id": "9fd49362-dcc4-43a2-8d59-a50628ab3d95",
+					"name": "detalle_ix_2",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "e722a02d-5255-4bab-a83f-8117f5c506f4",
+							"colid": "2c44b350-8b37-4285-aba2-c8c4c06a233e"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"30a4daac-fd0e-4312-8452-4d4dff01f28c": {
+			"id": "30a4daac-fd0e-4312-8452-4d4dff01f28c",
+			"visible": true,
+			"name": "PAs",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "f1ed91ca-0044-4aa3-93d2-7b8d5ada9d57",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "1a04a217-9812-4b83-9f01-3edd634e0f14",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "64",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "40eab90e-095e-4bd7-ba8e-51e405b31c6f",
+					"name": "ATC",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"7f01d692-a961-4397-b948-36de438ca4e8"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "7db29b5f-a1aa-49a2-81a2-d3cd6de68ae0",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "82e5a5a2-9393-4a5a-be5f-4e54d1975b1a",
+							"colid": "f1ed91ca-0044-4aa3-93d2-7b8d5ada9d57"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "93782acf-5b2e-4e6a-b996-1632484ca036",
+					"name": "PAs_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "7a5fb942-8e0d-49fb-a729-b1c31b3e4ad1",
+							"colid": "1a04a217-9812-4b83-9f01-3edd634e0f14"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"548e1dcf-2110-47bd-b875-3259efdc60c7": {
+			"id": "548e1dcf-2110-47bd-b875-3259efdc60c7",
+			"visible": true,
+			"name": "pa_vs_productos",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "71b29061-6dac-4dd8-adb1-39cdd456989f",
+					"name": "producto_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "3f950ece-c55b-4c56-b148-4948d3d1c6fd",
+					"name": "pa_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"fk": true,
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "2ebea3db-5c5a-4874-bdd6-84f7bb3d045d",
+					"name": "cantidad",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "cbb54479-4e20-4456-9498-b2e1811ca32a",
+					"name": "unidad_medida_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"7f01d692-a961-4397-b948-36de438ca4e8",
+				"9c809986-b917-4138-b181-94c1f76c2be1",
+				"4f7c98fa-19b1-4b42-8b93-2a8ebeea8c04"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "7b1391ad-d193-41f0-be2c-33fbb3b92129",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "f44b7b4a-b545-45fc-be43-0b4d91f8df61",
+							"colid": "71b29061-6dac-4dd8-adb1-39cdd456989f"
+						},
+						{
+							"id": "fa5a6edd-5396-46bf-b091-a0c03e0b75e4",
+							"colid": "3f950ece-c55b-4c56-b148-4948d3d1c6fd"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "4913b008-a18d-4b80-aca5-eafbcf7d8f56",
+					"name": "pa_vs_productos_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "0b5fbd1d-d1e3-4f3a-9f6f-5acc55e2032b",
+							"colid": "71b29061-6dac-4dd8-adb1-39cdd456989f"
+						}
+					]
+				},
+				{
+					"id": "b3cc7ef8-9536-44eb-9b92-f8d844abe67c",
+					"name": "pa_vs_productos_ix_2",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "30bde7e3-1767-47ef-a6ed-0d41c436d534",
+							"colid": "3f950ece-c55b-4c56-b148-4948d3d1c6fd"
+						}
+					]
+				},
+				{
+					"id": "e4737ceb-f358-4a52-aa0b-70f41ce193a2",
+					"name": "pa_vs_productos_ix_3",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "01ddf274-5d9d-43a0-ad5b-9a74adb21cd2",
+							"colid": "71b29061-6dac-4dd8-adb1-39cdd456989f"
+						},
+						{
+							"id": "96a75876-e3e4-4dbc-b6a9-52430d45ff5f",
+							"colid": "3f950ece-c55b-4c56-b148-4948d3d1c6fd"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"b4183a3a-b0dd-4e78-b312-5922a831ed22": {
+			"id": "b4183a3a-b0dd-4e78-b312-5922a831ed22",
+			"visible": true,
+			"name": "unidad_medida",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "9b805c12-7780-4e30-8bb8-15ad783157df",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "ccf7e656-89ec-4642-b748-a40e5dc19b97",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "16",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "24257dd2-7ce0-44a4-96bd-4c08bddee20f",
+					"name": "dimension_medida_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"4f7c98fa-19b1-4b42-8b93-2a8ebeea8c04",
+				"d9bba9d3-c407-4bb3-a93d-0eba7c8fb6ca",
+				"89699ca1-62a9-4c27-9eae-c138489f1bf9"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "c4944a73-8477-4662-9b5f-36a3e38f3bee",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "6a074f37-58bb-486a-ad6a-055d935a1dca",
+							"colid": "9b805c12-7780-4e30-8bb8-15ad783157df"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"e4ca77af-68ce-4cbb-8503-bba60eecfd0d": {
+			"id": "e4ca77af-68ce-4cbb-8503-bba60eecfd0d",
+			"visible": true,
+			"name": "variante",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "4ecc8589-ac0f-44d2-ab5f-9c21a5e00dc2",
+					"name": "id",
+					"datatype": "VARCHAR",
+					"param": "16",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"fk": true,
+					"binary": false
+				},
+				{
+					"id": "18157db8-eed9-4195-a355-4131fe685c47",
+					"name": "producto_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"fk": true,
+					"binary": false
+				},
+				{
+					"id": "59ec5ae2-db75-4f20-b715-3bfb5c6c1c38",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "48",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "ca3de4bd-3635-4a6b-acf2-b28e8c0b96a0",
+					"name": "caracteristica",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "5c40f1b0-8d2b-4d61-8e92-562ff1656c10",
+					"name": "valor",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "4ec656a4-bb73-40da-a9ce-5ecd754555c2",
+					"name": "usuario_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"2f80d6a5-4390-4866-96c5-6b6b4b1c4906",
+				"18616617-d1d3-4d0c-a771-e0fe46cf2ce7",
+				"8b171cb0-dc41-4bf4-9cbe-b77ae42bb90f"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "366f31d1-5e6a-4eab-aeca-79f527b3bb58",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "a37da672-f712-41e6-aa66-0bc3ec294821",
+							"colid": "4ecc8589-ac0f-44d2-ab5f-9c21a5e00dc2"
+						},
+						{
+							"id": "2783ff41-d4e7-4fc8-99ed-e6f2f3bc9c59",
+							"colid": "18157db8-eed9-4195-a355-4131fe685c47"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"ef2f3478-21ef-4075-b3c1-4c6b953057a1": {
+			"id": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+			"visible": true,
+			"name": "usuario",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "916e8cf4-a163-4cb9-80b4-7eb6877bfed0",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "ab9914e0-3244-4e1e-95d9-9e1c5e0bf77f",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "8324835d-5cf0-41d7-9f2f-496e6e0f23d9",
+					"name": "apellido",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "7d3ce24c-9fc5-45de-b2eb-6560e9ca231d",
+					"name": "email",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "100759ee-153a-4c07-a995-af440bea83f3",
+					"name": "celular",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "0a315ebc-670d-45b0-9bc2-bbe85dd1f52a",
+					"name": "rut",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "578b23f8-cb59-4327-a626-216eb176b73b",
+					"name": "usuario_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"fk": true,
+					"binary": false
+				}
+			],
+			"relations": [
+				"60d004d9-9049-491d-9110-452b8af3d4a3",
+				"8b171cb0-dc41-4bf4-9cbe-b77ae42bb90f",
+				"fcabc17a-47f9-43ee-98b8-09a185d6a42c",
+				"6ccb6213-765b-4793-9e47-c881ebab9662",
+				"b4769902-febc-4ed6-85a7-f73facdbab5f"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "b5f9630e-ef36-43c5-8725-8f7a110c6c48",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "820fcbc2-7afd-4a6e-b47e-7cd5ac728045",
+							"colid": "916e8cf4-a163-4cb9-80b4-7eb6877bfed0"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"74d04509-6cd7-4e01-a4d1-cb149cb7d455": {
+			"id": "74d04509-6cd7-4e01-a4d1-cb149cb7d455",
+			"visible": true,
+			"name": "laboratorio",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "fb8b047c-c7e7-44fd-a9bc-44105b3c48fc",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "4c65180f-8625-4417-b94d-e292be8889cb",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"2bc79418-c1f0-4638-8d28-12db4712c8a9"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "ee440344-3688-490d-807e-029a257d8d7a",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "30698c3b-8d21-4288-a0e3-936813dcf258",
+							"colid": "fb8b047c-c7e7-44fd-a9bc-44105b3c48fc"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "50f9d450-03f9-420f-9f12-d6ceabb9f640",
+					"name": "laboratorio_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "7fc4975d-cca7-4ef6-a7f6-5055a3650b93",
+							"colid": "4c65180f-8625-4417-b94d-e292be8889cb"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"9c26d00e-6c8d-44ee-9bc3-0ca6f62d89ab": {
+			"id": "9c26d00e-6c8d-44ee-9bc3-0ca6f62d89ab",
+			"visible": true,
+			"name": "famila_productos",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "5237af1f-5d27-44ab-a69c-cd451613c590",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"after": "",
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "18470250-e690-4b92-b7fb-6e49af24848d",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "20",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "fac46378-afd5-4c33-982c-c825e68b0706",
+					"name": "registro_isp",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"5cd1c8e3-4d22-451a-a5f6-19b118b11f4b"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "89ab1dae-8c83-4d3b-9754-78fa2171658f",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "fbc45325-2d5b-4aa6-aacc-b4b761e3e54a",
+							"colid": "5237af1f-5d27-44ab-a69c-cd451613c590"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"4386b3d5-8cd6-493c-8217-4730916504e1": {
+			"id": "4386b3d5-8cd6-493c-8217-4730916504e1",
+			"visible": true,
+			"name": "promocion",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "3f3032fb-619c-4c2b-aad1-7ea886f1e787",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"after": "",
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "15e07eff-d32c-409f-ac64-9ae9ba917a32",
+					"name": "producto_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"fk": true,
+					"binary": false
+				},
+				{
+					"id": "35c3ba56-a05b-43c0-a571-804226cddccf",
+					"name": "activo",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "396ce64b-cc32-4d72-aba8-16b3e1996562",
+					"name": "asociable",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "92563fef-f6f6-4497-809a-002df98d3783",
+					"name": "codigo_python",
+					"datatype": "MEDIUMTEXT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"5e4cc18e-7658-4080-9925-4e0409091138"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "27cd1f4b-8d73-4b84-a713-32df8641106e",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "8abbe037-c1bb-4533-ad0e-9c1a2fe363b6",
+							"colid": "3f3032fb-619c-4c2b-aad1-7ea886f1e787"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"ddbb1196-5aa8-4df4-87b5-a5eda67525e6": {
+			"id": "ddbb1196-5aa8-4df4-87b5-a5eda67525e6",
+			"visible": true,
+			"name": "precios",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "44eec6ba-8251-4c59-a9be-dacd54592c28",
+					"name": "id",
+					"datatype": "TIMESTAMP",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "NOW()",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "79edefc8-d1dd-43c3-9636-b3fb6a3cb405",
+					"name": "producto_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false,
+					"fk": true
+				},
+				{
+					"id": "46178907-1b1f-4c33-beaa-46ca0d64b554",
+					"name": "usuario_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false,
+					"fk": true
+				},
+				{
+					"id": "b2f3f574-8c41-4921-a6c4-95fe4aecb8f3",
+					"name": "precio",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "c5ab92c8-1847-4fb2-884c-ffe3680a445b",
+					"name": "es_compra",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"3887f8f0-e3fb-4f4a-b2cf-5f6f1efe1c7e",
+				"6ccb6213-765b-4793-9e47-c881ebab9662"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "0f9e3f7c-6a70-43d4-8aef-0b3a33590c9f",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "f83a335b-f5d9-4948-96f3-e96919295eb2",
+							"colid": "44eec6ba-8251-4c59-a9be-dacd54592c28"
+						},
+						{
+							"id": "91fe7ff2-5180-4c91-9066-2257301057b6",
+							"colid": "79edefc8-d1dd-43c3-9636-b3fb6a3cb405"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "bfc9c249-5da5-456d-a600-789e3be590e2",
+					"name": "precios_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "fe786f10-165f-411b-b43c-6a5c472fd441",
+							"colid": "79edefc8-d1dd-43c3-9636-b3fb6a3cb405"
+						}
+					]
+				},
+				{
+					"id": "161f537c-4e70-45f0-bf54-5dfdca14383b",
+					"name": "precios_ix_2",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "245e7f87-8fee-49de-a46d-1c3162c4f90d",
+							"colid": "c5ab92c8-1847-4fb2-884c-ffe3680a445b"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"0ad61069-78ee-4bba-825f-606d19648d1c": {
+			"id": "0ad61069-78ee-4bba-825f-606d19648d1c",
+			"visible": true,
+			"name": "forma_farmaceutica",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "e7c6e87a-58e8-43d4-a536-f75cb7bf3b86",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"after": "",
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "266235b9-796e-4fa7-8606-4a6a89f1d16f",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "67323e18-32f1-4a97-b935-f96ecdf50ef2",
+					"name": "es_liquido",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"ed6e9a5b-629e-43f0-bb30-b542cf576be3"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "f761069b-ba41-488d-8139-46934ab167d3",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "2a4e6c5c-a3c5-45af-aa57-39123638a91c",
+							"colid": "e7c6e87a-58e8-43d4-a536-f75cb7bf3b86"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"151ad746-85a1-414f-86f5-cbfb3fd8bdd1": {
+			"id": "151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+			"visible": true,
+			"name": "movimiento",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "252cd85b-6ae2-4299-86a2-950f40f2793d",
+					"name": "id",
+					"datatype": "TIMESTAMP",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "d3c980fc-4118-4712-b249-e3fb04295760",
+					"name": "usuario_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false,
+					"fk": true
+				},
+				{
+					"id": "7110bd6f-dc61-40a6-b28a-347029fb1906",
+					"name": "producto_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false,
+					"fk": true
+				},
+				{
+					"id": "e1105971-85d0-4433-864a-775d2f6d5eac",
+					"name": "cantidad",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "75cb5e76-388b-43b2-b738-43f579dc72cf",
+					"name": "destino_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "4d3bc826-e50c-4775-864c-6a789cac002b",
+					"name": "fuente_id",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"b4769902-febc-4ed6-85a7-f73facdbab5f",
+				"4b70e5e5-5f15-41c5-894f-39c3b7456145",
+				"567c02b7-1a83-4e1a-883d-df6fc2bf60ce",
+				"256ff95a-8f13-4f07-9923-789acfccfb65",
+				"59f144d9-e08d-4e85-9f8c-a3df5a51c716"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "452cc337-1562-4e17-8c2a-b065b80162ad",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "49be71e1-f1dc-4084-b2ea-e10f6c35b60f",
+							"colid": "252cd85b-6ae2-4299-86a2-950f40f2793d"
+						}
+					]
+				}
+			],
+			"indexes": [
+				{
+					"id": "7fc23511-f7d9-4902-b890-1e6663ecc78c",
+					"name": "movimientos_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": [
+						{
+							"id": "f0c106dd-10d1-414d-baa3-993a54ce1b4c",
+							"colid": "7110bd6f-dc61-40a6-b28a-347029fb1906"
+						}
+					]
+				}
+			],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"03449497-7738-42c6-a281-4a71c5e787a8": {
+			"id": "03449497-7738-42c6-a281-4a71c5e787a8",
+			"visible": true,
+			"name": "tipo_pago",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c1370bf9-8714-49ff-8a15-92abf0177f96",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "24c98bde-1614-454a-aaaf-03b3fa8b3680",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "f5f78322-0b56-4138-8e08-1468bf93e37a",
+					"name": "castigo",
+					"datatype": "FLOAT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"aed980e0-82c7-49c8-ab2a-6d2c2df143b2"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "3fdbc295-f4ab-4cf3-be7b-28c1599a8e2d",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "66b3943e-84db-4171-b343-2bc6cbfc020e",
+							"colid": "c1370bf9-8714-49ff-8a15-92abf0177f96"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"210d48dc-6363-426c-880a-6df4074e9051": {
+			"id": "210d48dc-6363-426c-880a-6df4074e9051",
+			"visible": true,
+			"name": "tipo_documento",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c6d43e57-54e7-4d93-90b0-998211345159",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "3fd6a334-ba49-4b18-9698-f2dca5640cbb",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				},
+				{
+					"id": "e7cc813c-f6ec-4a97-b99a-49f5e1540785",
+					"name": "codigo_sii",
+					"datatype": "TINYINT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"6ec67c72-5657-497d-9c81-5f04aa27f135"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "9cc1fb01-2530-48c4-b22e-6f79943b6f7c",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "86a52d8d-2181-4466-87ba-b7aecc599465",
+							"colid": "c6d43e57-54e7-4d93-90b0-998211345159"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"4e15f6c9-737d-4f77-8c0e-d677094e7330": {
+			"id": "4e15f6c9-737d-4f77-8c0e-d677094e7330",
+			"visible": true,
+			"name": "fuente",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "6e36fe20-c926-4ce9-b780-b6abe0b907a9",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "13f02565-dac1-4a47-8c77-b695defda3e9",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"256ff95a-8f13-4f07-9923-789acfccfb65"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "e6c364d2-66c2-4643-8107-176d3ada3a21",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "246e90e9-779e-4456-a2a8-7ef70cccedc6",
+							"colid": "6e36fe20-c926-4ce9-b780-b6abe0b907a9"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"456bac34-e95c-41be-b2bb-6697e6dcb000": {
+			"id": "456bac34-e95c-41be-b2bb-6697e6dcb000",
+			"visible": true,
+			"name": "destino",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "4e163a3c-99a4-4b3a-b82f-0c4e95a3a1c3",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": false,
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "b68879c5-7bc4-496f-8402-ec02311d3ba0",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "32",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"fk": false,
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"567c02b7-1a83-4e1a-883d-df6fc2bf60ce"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "99e1c16a-ce99-4abf-ae1b-ea619fa7e718",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "a4ddcd88-585c-4ebd-a899-4ffc22e262d2",
+							"colid": "4e163a3c-99a4-4b3a-b82f-0c4e95a3a1c3"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		},
+		"38f3a939-8319-483c-ab33-67b2d010fd14": {
+			"id": "38f3a939-8319-483c-ab33-67b2d010fd14",
+			"visible": true,
+			"name": "dimension_medida",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "35b7b67a-dd92-47cd-9eab-6a32bdab82ab",
+					"name": "id",
+					"datatype": "INT",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"autoinc": true,
+					"enum": "",
+					"list": false,
+					"unsigned": true,
+					"zerofill": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "f99ffccf-3471-4f0d-924f-c0142be31648",
+					"name": "nombre",
+					"datatype": "VARCHAR",
+					"param": "30",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": true,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": true,
+					"enum": "",
+					"after": "",
+					"list": false,
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"89699ca1-62a9-4c27-9eae-c138489f1bf9"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "b26d61b7-317d-46b2-ae15-3d6923f17ad8",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "f9a369ee-6e14-416b-ae55-a3b42555d892",
+							"colid": "35b7b67a-dd92-47cd-9eab-6a32bdab82ab"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"tabletype": "",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na",
+			"database": "farmacia",
+			"initautoinc": ""
+		}
+	},
+	"relations": {
+		"f8835a0b-9f30-4c6e-9777-faa98fe12cf2": {
+			"id": "f8835a0b-9f30-4c6e-9777-faa98fe12cf2",
+			"visible": true,
+			"name": "boleta_detalle",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "5484c6d3-22b5-4f4c-b216-4809e601f950",
+			"parent": "d45836ef-166f-4d0b-9cd1-7e7ea29626a9",
+			"child": "ea17de24-bc3b-4726-b83e-a71385c4c374",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "eb516d17-88da-4199-9aa5-70c69125f19d",
+					"parentcol": "52d6a380-6019-4a19-bb70-b57bab5c717b",
+					"childcol": "03e08a6f-523a-4d20-a26c-7357d4c20a81"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"ri_pd": "Restrict",
+			"ri_pu": "Restrict"
+		},
+		"75312aa8-b3ae-4fe0-b2c8-c6c779d1aae3": {
+			"id": "75312aa8-b3ae-4fe0-b2c8-c6c779d1aae3",
+			"visible": true,
+			"name": "producto_detalle",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "ea17de24-bc3b-4726-b83e-a71385c4c374",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "7de7ce19-af34-4cac-81cc-b71def8b0e0c",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "8efdc89e-dddc-46cf-acf0-4f19f532838b"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"6267c7b8-d1c5-40c4-b23b-d2f7bbd760c6": {
+			"id": "6267c7b8-d1c5-40c4-b23b-d2f7bbd760c6",
+			"visible": true,
+			"name": "producto_codigos_barra",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "aa13634f-e8bf-4fc1-95d0-ede4ba71781b",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "5c4861d4-f555-47d7-b8c5-92a224f27078",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "c9cc1313-35b8-41e3-b86d-01b5fc78c4ab"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"7f01d692-a961-4397-b948-36de438ca4e8": {
+			"id": "7f01d692-a961-4397-b948-36de438ca4e8",
+			"visible": true,
+			"name": "PAs_pa_vs_productos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "7db29b5f-a1aa-49a2-81a2-d3cd6de68ae0",
+			"parent": "30a4daac-fd0e-4312-8452-4d4dff01f28c",
+			"child": "548e1dcf-2110-47bd-b875-3259efdc60c7",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "9a7fd61e-98f8-401c-bca0-41e3ce21a434",
+					"parentcol": "f1ed91ca-0044-4aa3-93d2-7b8d5ada9d57",
+					"childcol": "3f950ece-c55b-4c56-b148-4948d3d1c6fd"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"9c809986-b917-4138-b181-94c1f76c2be1": {
+			"id": "9c809986-b917-4138-b181-94c1f76c2be1",
+			"visible": true,
+			"name": "producto_pa_vs_productos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "548e1dcf-2110-47bd-b875-3259efdc60c7",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "26151309-c997-42ed-ab78-db482e0ab493",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "71b29061-6dac-4dd8-adb1-39cdd456989f"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"4f7c98fa-19b1-4b42-8b93-2a8ebeea8c04": {
+			"id": "4f7c98fa-19b1-4b42-8b93-2a8ebeea8c04",
+			"visible": true,
+			"name": "unidades_medida_pa_vs_productos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "c4944a73-8477-4662-9b5f-36a3e38f3bee",
+			"parent": "b4183a3a-b0dd-4e78-b312-5922a831ed22",
+			"child": "548e1dcf-2110-47bd-b875-3259efdc60c7",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "3f1ea868-476e-46a2-8ea1-99b975bc47f3",
+					"parentcol": "9b805c12-7780-4e30-8bb8-15ad783157df",
+					"childcol": "cbb54479-4e20-4456-9498-b2e1811ca32a"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"d9bba9d3-c407-4bb3-a93d-0eba7c8fb6ca": {
+			"id": "d9bba9d3-c407-4bb3-a93d-0eba7c8fb6ca",
+			"visible": true,
+			"name": "unidad_medida_producto",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "c4944a73-8477-4662-9b5f-36a3e38f3bee",
+			"parent": "b4183a3a-b0dd-4e78-b312-5922a831ed22",
+			"child": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "d01e7029-6068-409a-9222-3252c18c81f6",
+					"parentcol": "9b805c12-7780-4e30-8bb8-15ad783157df",
+					"childcol": "e0cb60af-6112-414d-8c92-2f4b6917fad4"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"2f80d6a5-4390-4866-96c5-6b6b4b1c4906": {
+			"id": "2f80d6a5-4390-4866-96c5-6b6b4b1c4906",
+			"visible": true,
+			"name": "codigos_barra_variante",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "d46b0370-e604-49be-8f73-05b67df17a09",
+			"parent": "aa13634f-e8bf-4fc1-95d0-ede4ba71781b",
+			"child": "e4ca77af-68ce-4cbb-8503-bba60eecfd0d",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "f8864bf5-3d04-4438-8732-f600a71f735e",
+					"parentcol": "0bf9b866-ec6e-487e-bafa-09805cbb579f",
+					"childcol": "4ecc8589-ac0f-44d2-ab5f-9c21a5e00dc2"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"18616617-d1d3-4d0c-a771-e0fe46cf2ce7": {
+			"id": "18616617-d1d3-4d0c-a771-e0fe46cf2ce7",
+			"visible": true,
+			"name": "producto_variante",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "e4ca77af-68ce-4cbb-8503-bba60eecfd0d",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "1e32ddc0-36a2-44e5-a648-9c47cbbf468e",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "18157db8-eed9-4195-a355-4131fe685c47"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"60d004d9-9049-491d-9110-452b8af3d4a3": {
+			"id": "60d004d9-9049-491d-9110-452b8af3d4a3",
+			"visible": true,
+			"name": "usuario_boleta",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b5f9630e-ef36-43c5-8725-8f7a110c6c48",
+			"parent": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+			"child": "d45836ef-166f-4d0b-9cd1-7e7ea29626a9",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "dc9c9055-a8c4-445c-962b-0ec70e4a2286",
+					"parentcol": "916e8cf4-a163-4cb9-80b4-7eb6877bfed0",
+					"childcol": "c9360954-c2cb-4033-9619-ca1c8710cab5"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"8b171cb0-dc41-4bf4-9cbe-b77ae42bb90f": {
+			"id": "8b171cb0-dc41-4bf4-9cbe-b77ae42bb90f",
+			"visible": true,
+			"name": "usuario_variante",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b5f9630e-ef36-43c5-8725-8f7a110c6c48",
+			"parent": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+			"child": "e4ca77af-68ce-4cbb-8503-bba60eecfd0d",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "d6372fb8-8543-4c5d-ad58-a5d4e2b5cd56",
+					"parentcol": "916e8cf4-a163-4cb9-80b4-7eb6877bfed0",
+					"childcol": "4ec656a4-bb73-40da-a9ce-5ecd754555c2"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"2bc79418-c1f0-4638-8d28-12db4712c8a9": {
+			"id": "2bc79418-c1f0-4638-8d28-12db4712c8a9",
+			"visible": true,
+			"name": "laboratorio_producto",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "ee440344-3688-490d-807e-029a257d8d7a",
+			"parent": "74d04509-6cd7-4e01-a4d1-cb149cb7d455",
+			"child": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "961e7b70-3be8-4fbb-984b-59067b530d2d",
+					"parentcol": "fb8b047c-c7e7-44fd-a9bc-44105b3c48fc",
+					"childcol": "83a5bb4e-9ca4-492a-a292-09454b69556c"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"fcabc17a-47f9-43ee-98b8-09a185d6a42c": {
+			"id": "fcabc17a-47f9-43ee-98b8-09a185d6a42c",
+			"visible": true,
+			"name": "usuario_usuario",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b5f9630e-ef36-43c5-8725-8f7a110c6c48",
+			"parent": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+			"child": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "0f21f2c1-bbd0-4211-8036-696cab19f376",
+					"parentcol": "916e8cf4-a163-4cb9-80b4-7eb6877bfed0",
+					"childcol": "578b23f8-cb59-4327-a626-216eb176b73b"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"5e4cc18e-7658-4080-9925-4e0409091138": {
+			"id": "5e4cc18e-7658-4080-9925-4e0409091138",
+			"visible": true,
+			"name": "producto_promocion",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "4386b3d5-8cd6-493c-8217-4730916504e1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "b832c158-3476-4405-b088-97c43adc693f",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "15e07eff-d32c-409f-ac64-9ae9ba917a32"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"5cd1c8e3-4d22-451a-a5f6-19b118b11f4b": {
+			"id": "5cd1c8e3-4d22-451a-a5f6-19b118b11f4b",
+			"visible": true,
+			"name": "famila_productos_producto",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "89ab1dae-8c83-4d3b-9754-78fa2171658f",
+			"parent": "9c26d00e-6c8d-44ee-9bc3-0ca6f62d89ab",
+			"child": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "f9c9d02f-2c35-46de-9375-3c003357382f",
+					"parentcol": "5237af1f-5d27-44ab-a69c-cd451613c590",
+					"childcol": "a047a59d-0855-4ec8-8bef-8ebae9f671ab"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"3887f8f0-e3fb-4f4a-b2cf-5f6f1efe1c7e": {
+			"id": "3887f8f0-e3fb-4f4a-b2cf-5f6f1efe1c7e",
+			"visible": true,
+			"name": "producto_precios",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "ddbb1196-5aa8-4df4-87b5-a5eda67525e6",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "5a18d80c-8ccd-405c-9783-ebe7a62b5859",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "79edefc8-d1dd-43c3-9636-b3fb6a3cb405"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"6ccb6213-765b-4793-9e47-c881ebab9662": {
+			"id": "6ccb6213-765b-4793-9e47-c881ebab9662",
+			"visible": true,
+			"name": "usuario_precios",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b5f9630e-ef36-43c5-8725-8f7a110c6c48",
+			"parent": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+			"child": "ddbb1196-5aa8-4df4-87b5-a5eda67525e6",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "ed348dec-4025-4d21-ac15-04af580ca075",
+					"parentcol": "916e8cf4-a163-4cb9-80b4-7eb6877bfed0",
+					"childcol": "46178907-1b1f-4c33-beaa-46ca0d64b554"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"0d6ba9bb-dd06-41b0-8989-16cbc62b2c7d": {
+			"id": "0d6ba9bb-dd06-41b0-8989-16cbc62b2c7d",
+			"visible": true,
+			"name": "producto_producto",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "40bfbfd9-2c51-467e-b0ad-79ddfb498513",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "c5c99c37-d8c0-4b7c-b11b-e02c97e9100b"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"ed6e9a5b-629e-43f0-bb30-b542cf576be3": {
+			"id": "ed6e9a5b-629e-43f0-bb30-b542cf576be3",
+			"visible": true,
+			"name": "forma_farmaceutica_producto",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "f761069b-ba41-488d-8139-46934ab167d3",
+			"parent": "0ad61069-78ee-4bba-825f-606d19648d1c",
+			"child": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "ef1ad9b9-6e73-47d1-a01a-4463ea7df0ec",
+					"parentcol": "e7c6e87a-58e8-43d4-a536-f75cb7bf3b86",
+					"childcol": "c51cf1b0-aa56-41f2-82b4-e6400c89f038"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"b4769902-febc-4ed6-85a7-f73facdbab5f": {
+			"id": "b4769902-febc-4ed6-85a7-f73facdbab5f",
+			"visible": true,
+			"name": "usuario_movimientos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b5f9630e-ef36-43c5-8725-8f7a110c6c48",
+			"parent": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+			"child": "151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "96016c3f-00d3-4cdf-9309-5203598279dd",
+					"parentcol": "916e8cf4-a163-4cb9-80b4-7eb6877bfed0",
+					"childcol": "d3c980fc-4118-4712-b249-e3fb04295760"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"4b70e5e5-5f15-41c5-894f-39c3b7456145": {
+			"id": "4b70e5e5-5f15-41c5-894f-39c3b7456145",
+			"visible": true,
+			"name": "producto_movimientos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5d6f382-2ff6-41ae-80e8-28804bcd5841",
+			"parent": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+			"child": "151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "3ec3c645-5b70-4996-8039-476cd3543945",
+					"parentcol": "1f661bb2-0a65-4720-b1cc-725bbbf38258",
+					"childcol": "7110bd6f-dc61-40a6-b28a-347029fb1906"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"aed980e0-82c7-49c8-ab2a-6d2c2df143b2": {
+			"id": "aed980e0-82c7-49c8-ab2a-6d2c2df143b2",
+			"visible": true,
+			"name": "tipo_pago_boleta",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "3fdbc295-f4ab-4cf3-be7b-28c1599a8e2d",
+			"parent": "03449497-7738-42c6-a281-4a71c5e787a8",
+			"child": "d45836ef-166f-4d0b-9cd1-7e7ea29626a9",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "d29e52ac-0f12-4851-b7ae-903514404dd1",
+					"parentcol": "c1370bf9-8714-49ff-8a15-92abf0177f96",
+					"childcol": "064f0111-2c41-4214-8da3-19226dcda7a1"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"6ec67c72-5657-497d-9c81-5f04aa27f135": {
+			"id": "6ec67c72-5657-497d-9c81-5f04aa27f135",
+			"visible": true,
+			"name": "tipo_documento_documento",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "9cc1fb01-2530-48c4-b22e-6f79943b6f7c",
+			"parent": "210d48dc-6363-426c-880a-6df4074e9051",
+			"child": "d45836ef-166f-4d0b-9cd1-7e7ea29626a9",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "a412d9af-7dff-4842-a78b-b9de53f0eae5",
+					"parentcol": "c6d43e57-54e7-4d93-90b0-998211345159",
+					"childcol": "c2eb6aab-ab69-41f1-bbea-2d91b6b0ba6c"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"567c02b7-1a83-4e1a-883d-df6fc2bf60ce": {
+			"id": "567c02b7-1a83-4e1a-883d-df6fc2bf60ce",
+			"visible": true,
+			"name": "destino_movimientos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "99e1c16a-ce99-4abf-ae1b-ea619fa7e718",
+			"parent": "456bac34-e95c-41be-b2bb-6697e6dcb000",
+			"child": "151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "63152d2c-e7a8-4a9d-b806-c01cc213a073",
+					"parentcol": "4e163a3c-99a4-4b3a-b82f-0c4e95a3a1c3",
+					"childcol": "75cb5e76-388b-43b2-b738-43f579dc72cf"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"256ff95a-8f13-4f07-9923-789acfccfb65": {
+			"id": "256ff95a-8f13-4f07-9923-789acfccfb65",
+			"visible": true,
+			"name": "fuente_movimientos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e6c364d2-66c2-4643-8107-176d3ada3a21",
+			"parent": "4e15f6c9-737d-4f77-8c0e-d677094e7330",
+			"child": "151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "1e22ae8e-b208-4847-9a96-12fcaed29a44",
+					"parentcol": "6e36fe20-c926-4ce9-b780-b6abe0b907a9",
+					"childcol": "4d3bc826-e50c-4775-864c-6a789cac002b"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"59f144d9-e08d-4e85-9f8c-a3df5a51c716": {
+			"id": "59f144d9-e08d-4e85-9f8c-a3df5a51c716",
+			"visible": true,
+			"name": "movimientos_detalle",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "452cc337-1562-4e17-8c2a-b065b80162ad",
+			"parent": "151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+			"child": "ea17de24-bc3b-4726-b83e-a71385c4c374",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "aa98be2d-7074-4afc-bc1f-fe11044cfe11",
+					"parentcol": "252cd85b-6ae2-4299-86a2-950f40f2793d",
+					"childcol": "2c44b350-8b37-4285-aba2-c8c4c06a233e"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"89699ca1-62a9-4c27-9eae-c138489f1bf9": {
+			"id": "89699ca1-62a9-4c27-9eae-c138489f1bf9",
+			"visible": true,
+			"name": "dimension_medida_unidad_medida",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b26d61b7-317d-46b2-ae15-3d6923f17ad8",
+			"parent": "38f3a939-8319-483c-ab33-67b2d010fd14",
+			"child": "b4183a3a-b0dd-4e78-b312-5922a831ed22",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "a6660375-b584-4182-8d6c-53b578e150e2",
+					"parentcol": "35b7b67a-dd92-47cd-9eab-6a32bdab82ab",
+					"childcol": "24257dd2-7ce0-44a4-96bd-4c08bddee20f"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		}
+	},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"name": "Farmacia",
+		"id": "08d8413f-0647-4970-9212-6af0bf2c461b",
+		"activeDiagram": "da85aa46-82e8-4351-a6b7-eb7be32b3d52",
+		"desc": "",
+		"path": "",
+		"type": "MYSQL",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 6,
+			"minor": 0,
+			"extra": 0
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": false,
+		"cardinalityIsDisplayed": false,
+		"estimatedSizeIsDisplayed": false,
+		"writeFileParam": true,
+		"currentDisplayMode": "metadata",
+		"def_tabletype": "",
+		"def_collation": "",
+		"def_charset": "",
+		"def_coltopk": true,
+		"def_rowformat": "na",
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": "//",
+			"keywordCase": "upper",
+			"identiferCase": "lower",
+			"includeSchema": "always",
+			"quotation": "if_needed"
+		},
+		"lastSaved": "Sat May 27 2023 11:41:12 GMT-0400 (hora estándar de Chile)",
+		"def_database": "",
+		"def_others": "",
+		"customDataTypes": []
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"da85aa46-82e8-4351-a6b7-eb7be32b3d52": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "da85aa46-82e8-4351-a6b7-eb7be32b3d52",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"7019ae48-c3d6-42fa-96dc-e8d138ec745f": {
+					"referencedItemId": "7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+					"x": 1358,
+					"y": 131,
+					"gHeight": 298,
+					"gWidth": 256,
+					"color": "#ffffff",
+					"background": "#ffc107",
+					"resized": true,
+					"autoExpand": true
+				},
+				"d45836ef-166f-4d0b-9cd1-7e7ea29626a9": {
+					"referencedItemId": "d45836ef-166f-4d0b-9cd1-7e7ea29626a9",
+					"x": 486,
+					"y": 439,
+					"gHeight": 136,
+					"gWidth": 241,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"aa13634f-e8bf-4fc1-95d0-ede4ba71781b": {
+					"referencedItemId": "aa13634f-e8bf-4fc1-95d0-ede4ba71781b",
+					"x": 922,
+					"y": 149,
+					"gHeight": 96,
+					"gWidth": 243,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"ea17de24-bc3b-4726-b83e-a71385c4c374": {
+					"referencedItemId": "ea17de24-bc3b-4726-b83e-a71385c4c374",
+					"x": 50,
+					"y": 186,
+					"gHeight": 190,
+					"gWidth": 301,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"30a4daac-fd0e-4312-8452-4d4dff01f28c": {
+					"referencedItemId": "30a4daac-fd0e-4312-8452-4d4dff01f28c",
+					"x": 1358,
+					"y": 40,
+					"gHeight": 81,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"548e1dcf-2110-47bd-b875-3259efdc60c7": {
+					"referencedItemId": "548e1dcf-2110-47bd-b875-3259efdc60c7",
+					"x": 922,
+					"y": 40,
+					"gHeight": 99,
+					"gWidth": 223,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"b4183a3a-b0dd-4e78-b312-5922a831ed22": {
+					"referencedItemId": "b4183a3a-b0dd-4e78-b312-5922a831ed22",
+					"x": 1794,
+					"y": 239,
+					"gHeight": 81,
+					"gWidth": 243,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"e4ca77af-68ce-4cbb-8503-bba60eecfd0d": {
+					"referencedItemId": "e4ca77af-68ce-4cbb-8503-bba60eecfd0d",
+					"x": 486,
+					"y": 149,
+					"gHeight": 135,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"ef2f3478-21ef-4075-b3c1-4c6b953057a1": {
+					"referencedItemId": "ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+					"x": 922,
+					"y": 255,
+					"gHeight": 153,
+					"gWidth": 216,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"74d04509-6cd7-4e01-a4d1-cb149cb7d455": {
+					"referencedItemId": "74d04509-6cd7-4e01-a4d1-cb149cb7d455",
+					"x": 1794,
+					"y": 330,
+					"gHeight": 63,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"9c26d00e-6c8d-44ee-9bc3-0ca6f62d89ab": {
+					"referencedItemId": "9c26d00e-6c8d-44ee-9bc3-0ca6f62d89ab",
+					"x": 1794,
+					"y": 403,
+					"gHeight": 81,
+					"gWidth": 219,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"4386b3d5-8cd6-493c-8217-4730916504e1": {
+					"referencedItemId": "4386b3d5-8cd6-493c-8217-4730916504e1",
+					"x": 922,
+					"y": 821,
+					"gHeight": 117,
+					"gWidth": 256,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"ddbb1196-5aa8-4df4-87b5-a5eda67525e6": {
+					"referencedItemId": "ddbb1196-5aa8-4df4-87b5-a5eda67525e6",
+					"x": 486,
+					"y": 585,
+					"gHeight": 117,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"0ad61069-78ee-4bba-825f-606d19648d1c": {
+					"referencedItemId": "0ad61069-78ee-4bba-825f-606d19648d1c",
+					"x": 1794,
+					"y": 494,
+					"gHeight": 81,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"151ad746-85a1-414f-86f5-cbfb3fd8bdd1": {
+					"referencedItemId": "151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+					"x": 486,
+					"y": 294,
+					"gHeight": 135,
+					"gWidth": 188,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"03449497-7738-42c6-a281-4a71c5e787a8": {
+					"referencedItemId": "03449497-7738-42c6-a281-4a71c5e787a8",
+					"x": 922,
+					"y": 493,
+					"gHeight": 81,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"210d48dc-6363-426c-880a-6df4074e9051": {
+					"referencedItemId": "210d48dc-6363-426c-880a-6df4074e9051",
+					"x": 922,
+					"y": 584,
+					"gHeight": 81,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"4e15f6c9-737d-4f77-8c0e-d677094e7330": {
+					"referencedItemId": "4e15f6c9-737d-4f77-8c0e-d677094e7330",
+					"x": 922,
+					"y": 748,
+					"gHeight": 63,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"456bac34-e95c-41be-b2bb-6697e6dcb000": {
+					"referencedItemId": "456bac34-e95c-41be-b2bb-6697e6dcb000",
+					"x": 922,
+					"y": 675,
+					"gHeight": 63,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"38f3a939-8319-483c-ab33-67b2d010fd14": {
+					"referencedItemId": "38f3a939-8319-483c-ab33-67b2d010fd14",
+					"x": 2230,
+					"y": 275,
+					"gHeight": 63,
+					"gWidth": 215,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": [
+		"7019ae48-c3d6-42fa-96dc-e8d138ec745f",
+		"d45836ef-166f-4d0b-9cd1-7e7ea29626a9",
+		"ea17de24-bc3b-4726-b83e-a71385c4c374",
+		"aa13634f-e8bf-4fc1-95d0-ede4ba71781b",
+		"30a4daac-fd0e-4312-8452-4d4dff01f28c",
+		"548e1dcf-2110-47bd-b875-3259efdc60c7",
+		"b4183a3a-b0dd-4e78-b312-5922a831ed22",
+		"e4ca77af-68ce-4cbb-8503-bba60eecfd0d",
+		"ef2f3478-21ef-4075-b3c1-4c6b953057a1",
+		"74d04509-6cd7-4e01-a4d1-cb149cb7d455",
+		"9c26d00e-6c8d-44ee-9bc3-0ca6f62d89ab",
+		"4386b3d5-8cd6-493c-8217-4730916504e1",
+		"ddbb1196-5aa8-4df4-87b5-a5eda67525e6",
+		"0ad61069-78ee-4bba-825f-606d19648d1c",
+		"151ad746-85a1-414f-86f5-cbfb3fd8bdd1",
+		"03449497-7738-42c6-a281-4a71c5e787a8",
+		"210d48dc-6363-426c-880a-6df4074e9051",
+		"4e15f6c9-737d-4f77-8c0e-d677094e7330",
+		"456bac34-e95c-41be-b2bb-6697e6dcb000",
+		"38f3a939-8319-483c-ab33-67b2d010fd14",
+		"f8835a0b-9f30-4c6e-9777-faa98fe12cf2",
+		"75312aa8-b3ae-4fe0-b2c8-c6c779d1aae3",
+		"6267c7b8-d1c5-40c4-b23b-d2f7bbd760c6",
+		"7f01d692-a961-4397-b948-36de438ca4e8",
+		"9c809986-b917-4138-b181-94c1f76c2be1",
+		"4f7c98fa-19b1-4b42-8b93-2a8ebeea8c04",
+		"d9bba9d3-c407-4bb3-a93d-0eba7c8fb6ca",
+		"2f80d6a5-4390-4866-96c5-6b6b4b1c4906",
+		"18616617-d1d3-4d0c-a771-e0fe46cf2ce7",
+		"60d004d9-9049-491d-9110-452b8af3d4a3",
+		"8b171cb0-dc41-4bf4-9cbe-b77ae42bb90f",
+		"2bc79418-c1f0-4638-8d28-12db4712c8a9",
+		"fcabc17a-47f9-43ee-98b8-09a185d6a42c",
+		"5e4cc18e-7658-4080-9925-4e0409091138",
+		"5cd1c8e3-4d22-451a-a5f6-19b118b11f4b",
+		"3887f8f0-e3fb-4f4a-b2cf-5f6f1efe1c7e",
+		"6ccb6213-765b-4793-9e47-c881ebab9662",
+		"0d6ba9bb-dd06-41b0-8989-16cbc62b2c7d",
+		"ed6e9a5b-629e-43f0-bb30-b542cf576be3",
+		"b4769902-febc-4ed6-85a7-f73facdbab5f",
+		"4b70e5e5-5f15-41c5-894f-39c3b7456145",
+		"aed980e0-82c7-49c8-ab2a-6d2c2df143b2",
+		"6ec67c72-5657-497d-9c81-5f04aa27f135",
+		"567c02b7-1a83-4e1a-883d-df6fc2bf60ce",
+		"256ff95a-8f13-4f07-9923-789acfccfb65",
+		"59f144d9-e08d-4e85-9f8c-a3df5a51c716",
+		"89699ca1-62a9-4c27-9eae-c138489f1bf9"
+	],
+	"collapsedTreeItems": [],
+	"reverseStats": {}
+}

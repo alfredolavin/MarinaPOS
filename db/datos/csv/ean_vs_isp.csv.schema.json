@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "name": "EAN",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "CODE_ISP",
+      "type": "string",
+      "format": "default"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}

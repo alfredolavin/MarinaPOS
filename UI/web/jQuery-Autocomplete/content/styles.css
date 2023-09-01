@@ -1,0 +1,130 @@
+﻿* {
+  font-family: "Roboto Mono for Powerline";
+  text-transform: uppercase;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #68a2ff1f;
+  font-size: 30px;
+}
+
+label {
+  text-shadow: 0px 0px 7px #000;
+  list-style-type: none;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 22px;
+  display: block;
+  color: #fff;
+}
+
+label.descripcion {
+  font-size: 24px;
+  color: #0f0;
+}
+
+label.last {
+  font-weight: normal;
+  font-size: 12px;
+  color: #eee;
+  margin: 3px;
+}
+
+label.multiplicador {
+  font-size: 30px;
+  float: right;
+  color: #0f0;
+}
+
+label.titulo {
+  font-size: 24px;
+}
+
+.autocomplete-group {
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+  padding: 2px 5px;
+  font-size: 16px;
+  display: block;
+  color: #000;
+}
+
+.autocomplete-no-suggestion {
+  padding: 2px 5px;
+}
+
+.autocomplete-selected {
+  background: #f0f0f0;
+}
+
+.autocomplete-suggestion {
+  white-space: nowrap;
+  padding: 2px 5px;
+  overflow: hidden;
+}
+
+.autocomplete-suggestions {
+  box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+  box-sizing: border-box;
+  border: 1px solid #999;
+  background: #fff;
+  cursor: default;
+  overflow: auto;
+}
+
+.autocomplete-suggestions strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.container {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  border-radius: 30px;
+  text-align: center;
+  margin-right: auto;
+  margin-bottom: 2%;
+  margin-left: auto;
+  overflow: auto;
+  margin-top: 2%;
+  height: 310px;
+  padding: 40px;
+  width: 38em;
+}
+
+.inputbar_div {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  border: 1px solid #dcdcdc;
+  padding-right: 0.6em;
+  border-radius: 30px;
+  width: fit-content;
+  user-select: none;
+  background: white;
+  margin: 0 auto;
+}
+
+.inputbar_input {
+  padding: 0.2em 0.5em;
+  text-align: center;
+  font-weight: bold;
+  background: none;
+  font-size: 30px;
+  margin-left: 2%;
+  display: block;
+  border: none;
+  width: 13ch;
+  caret-color: transparent;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6em;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}

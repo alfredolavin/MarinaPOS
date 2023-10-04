@@ -1,6 +1,6 @@
 from peewee import *
 
-database = SqliteDatabase('marinapos.db')
+database = SqliteDatabase('../marinapos.db')
 
 class UnknownField(object):
     def __init__(self, *_, **__): pass
@@ -9,15 +9,24 @@ class BaseModel(Model):
     class Meta:
         database = database
 
+class CodigoAtc(BaseModel):
+    descripcion = TextField()
+    nombre = TextField()
+
+    class Meta:
+        table_name = 'codigo_atc'
+
 class UnidadDeMedida(BaseModel):
-    nombre = TextField(null=True, unique=True)
+    descripcion = TextField()
+    nombre = TextField(unique=True)
+    unidad_de_medida_id = AutoField()
 
     class Meta:
         table_name = 'unidad_de_medida'
 
 class FormaFarmaceutica(BaseModel):
     nombre = TextField(null=True, unique=True)
-    unidad_de_medida = ForeignKeyField(column_name='unidad_de_medida_id', field='id', model=UnidadDeMedida)
+    unidad_de_medida = ForeignKeyField(column_name='unidad_de_medida_id', field='unidad_de_medida_id', model=UnidadDeMedida)
 
     class Meta:
         table_name = 'forma_farmaceutica'
@@ -29,9 +38,8 @@ class Laboratorio(BaseModel):
         table_name = 'laboratorio'
 
 class Producto(BaseModel):
-    cantidad = IntegerField(null=True)
-    concentracion = TextField(null=True)
-    costo = IntegerField()
+    cantidad = IntegerField()
+    concentracion = TextField()
     es_activo = BooleanField(null=True)
     es_bioequivalente = BooleanField(null=True)
     es_controlado = BooleanField(null=True)
@@ -40,12 +48,10 @@ class Producto(BaseModel):
     es_refrigerado = BooleanField(null=True)
     forma_farmaceutica = ForeignKeyField(column_name='forma_farmaceutica_id', field='id', model=FormaFarmaceutica)
     laboratorio = ForeignKeyField(column_name='laboratorio_id', field='id', model=Laboratorio)
-    nombre = TextField(index=True)
-    precio = IntegerField()
-    principio_activo = TextField(index=True, null=True)
-    registro_isp = TextField(null=True)
-    stock = IntegerField(null=True)
-    unidad_de_concentracion = ForeignKeyField(column_name='unidad_de_concentracion_id', field='id', model=UnidadDeMedida)
+    nombre = TextField()
+    nombre_largo = TextField(index=True)
+    unidad_de_cantidad = ForeignKeyField(column_name='unidad_de_cantidad', field='unidad_de_medida_id', model=UnidadDeMedida)
+    unidad_de_concentracion = ForeignKeyField(backref='unidad_de_medida_unidad_de_concentracion_set', column_name='unidad_de_concentracion', field='unidad_de_medida_id', model=UnidadDeMedida)
 
     class Meta:
         table_name = 'producto'
@@ -56,6 +62,25 @@ class CodigoDeBarras(BaseModel):
 
     class Meta:
         table_name = 'codigo_de_barras'
+
+class TipoDetalle(BaseModel):
+    nombre_detalle = TextField()
+
+    class Meta:
+        table_name = 'tipo_detalle'
+
+class DetalleProducto(BaseModel):
+    detalle = TextField()
+    producto = ForeignKeyField(column_name='producto_id', field='id', model=Producto)
+    tipo_detalles = ForeignKeyField(column_name='tipo_detalles_id', field='id', model=TipoDetalle)
+
+    class Meta:
+        table_name = 'detalle_producto'
+        indexes = (
+            (('producto', 'tipo_detalles'), True),
+            (('producto', 'tipo_detalles'), True),
+        )
+        primary_key = CompositeKey('producto', 'tipo_detalles')
 
 class Usuario(BaseModel):
     apodo = TextField()
@@ -119,11 +144,67 @@ class Movimiento(BaseModel):
     class Meta:
         table_name = 'movimiento'
 
+class PrincipioActivo(BaseModel):
+    nombre = TextField()
+
+    class Meta:
+        table_name = 'principio_activo'
+
+class PrincipioActivoYCodigoAtc(BaseModel):
+    codigo_atc = ForeignKeyField(column_name='codigo_atc_id', field='id', model=CodigoAtc)
+    principio_activo = ForeignKeyField(column_name='principio_activo_id', field='id', model=PrincipioActivo)
+
+    class Meta:
+        table_name = 'principio_activo_y_codigo_atc'
+        indexes = (
+            (('codigo_atc', 'principio_activo'), True),
+        )
+        primary_key = CompositeKey('codigo_atc', 'principio_activo')
+
+class PrincipioActivoYProducto(BaseModel):
+    concentracion = IntegerField()
+    principio_activo = ForeignKeyField(column_name='principio_activo_id', field='id', model=PrincipioActivo)
+    producto = ForeignKeyField(column_name='producto_id', field='id', model=Producto)
+    unidad_de_medida = ForeignKeyField(column_name='unidad_de_medida_id', field='unidad_de_medida_id', model=UnidadDeMedida)
+
+    class Meta:
+        table_name = 'principio_activo_y_producto'
+        indexes = (
+            (('producto', 'principio_activo'), True),
+        )
+        primary_key = CompositeKey('principio_activo', 'producto')
+
+class ProductoPrecio(BaseModel):
+    momento = DateTimeField()
+    precio_compra = IntegerField(null=True)
+    precio_venta = IntegerField()
+    producto = ForeignKeyField(column_name='producto_id', field='id', model=Producto)
+    usuario = ForeignKeyField(column_name='usuario_id', field='id', model=Usuario)
+
+    class Meta:
+        table_name = 'producto_precio'
+
 class SqliteSequence(BaseModel):
     name = BareField(null=True)
     seq = BareField(null=True)
 
     class Meta:
         table_name = 'sqlite_sequence'
+        primary_key = False
+
+class TipoPago(BaseModel):
+    _1 = TextField(column_name='1', null=True)
+    efectivo = TextField(column_name='EFECTIVO', null=True)
+
+    class Meta:
+        table_name = 'tipo_pago'
+        primary_key = False
+
+class TipoReceta(BaseModel):
+    _450000001 = TextField(column_name='450000001', null=True)
+    libre = TextField(column_name='LIBRE', null=True)
+
+    class Meta:
+        table_name = 'tipo_receta'
         primary_key = False
 

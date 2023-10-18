@@ -1,7 +1,6 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Input
 from textual_autocomplete import AutoComplete, Dropdown, DropdownItem
-from db.model import *
 
 ITEMS = [
     DropdownItem("Amox"),

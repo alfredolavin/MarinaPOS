@@ -24,40 +24,8 @@
 					"estimatedSize": ""
 				},
 				{
-					"id": "b097bcbf-1e38-4ce2-8cae-58f28b79b45b",
-					"name": "nombre_largo",
-					"datatype": "TEXT",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
 					"id": "1aa4c6c6-469c-4fc1-8aaf-ece43f3aeeba",
 					"name": "nombre",
-					"datatype": "TEXT",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "f3aba24e-c774-4c2c-9231-30e05176dde4",
-					"name": "concentracion",
 					"datatype": "TEXT",
 					"param": "",
 					"pk": false,
@@ -120,102 +88,6 @@
 					"fk": true,
 					"param": "",
 					"estimatedSize": ""
-				},
-				{
-					"id": "35558574-8e6b-446b-9590-6a4707c9ea4b",
-					"name": "es_generico",
-					"datatype": "BOOLEAN",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "6740e185-c4c6-4c32-803f-6644376fd2f8",
-					"name": "es_bioequivalente",
-					"datatype": "BOOLEAN",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "2cbb0621-0a9a-4ac6-9deb-d7e837414745",
-					"name": "es_refrigerado",
-					"datatype": "BOOLEAN",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "4d9668d1-1005-4c16-ad99-b7efd9df411a",
-					"name": "es_controlado",
-					"datatype": "BOOLEAN",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "12b99af5-3e4e-4a85-8c65-dcaec31e75e4",
-					"name": "es_desactivado",
-					"datatype": "BOOLEAN",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "2d40f72a-99d2-414c-8923-753b89338f3c",
-					"name": "es_cenabast",
-					"datatype": "BOOLEAN",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
 				}
 			],
 			"relations": [
@@ -224,7 +96,8 @@
 				"6ffd5002-15a6-455f-96bc-0cfc0cfce9a4",
 				"f2068df5-576a-4b02-8170-accffdc6e54c",
 				"844d8b46-9d0f-4c65-a255-9d60f11560bf",
-				"09d8f4ff-56b9-425b-9bb1-db75e1abff80"
+				"09d8f4ff-56b9-425b-9bb1-db75e1abff80",
+				"ad133743-3163-4629-a234-292e9a55cf52"
 			],
 			"lines": [],
 			"keys": [
@@ -249,17 +122,7 @@
 						"expression": "",
 						"desc": ""
 					},
-					"cols": [
-						{
-							"id": "2a82bfac-b754-49cf-b500-354f25f61b0c",
-							"colid": "b097bcbf-1e38-4ce2-8cae-58f28b79b45b",
-							"sqlite": {
-								"desc": false,
-								"collate": "",
-								"expression": ""
-							}
-						}
-					]
+					"cols": []
 				}
 			],
 			"embeddable": false,
@@ -2114,6 +1977,146 @@
 				"withoutrowid": false,
 				"strict": false
 			}
+		},
+		"bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41": {
+			"id": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
+			"visible": true,
+			"name": "detalles_farmaceuticos",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "dcce9906-b0f2-44b3-b266-e0efe9c89555",
+					"name": "id",
+					"datatype": "INTEGER",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"collation": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": true
+				},
+				{
+					"id": "0154c49f-a195-48ee-a532-68afbd870aa6",
+					"name": "cenabast❓",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": false
+				},
+				{
+					"id": "a62496e8-2ac2-4412-b1da-fb7f8dcdac61",
+					"name": "controlado❓",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": false
+				},
+				{
+					"id": "93b27304-35ce-445d-9f26-8c0e38c60dd4",
+					"name": "refrigerado❓",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": false
+				},
+				{
+					"id": "f7ed2318-c370-4763-adfc-e2d095658b12",
+					"name": "bioequivalente❓",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": false
+				},
+				{
+					"id": "c3ff4ed0-da1b-44f9-b7e0-4427c4e2494c",
+					"name": "generico❓",
+					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": false
+				}
+			],
+			"relations": [
+				"ad133743-3163-4629-a234-292e9a55cf52"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "3b7b9bb0-b6f4-4ec7-b653-39abc8acbe81",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "7549201c-b797-4535-bf01-4938703bdc8a",
+							"colid": "dcce9906-b0f2-44b3-b266-e0efe9c89555"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"sqlite": {
+				"withoutrowid": false,
+				"strict": false
+			}
 		}
 	},
 	"relations": {
@@ -2602,6 +2605,33 @@
 			"generateCustomCode": true,
 			"customCode": "",
 			"relationColor": "transparent"
+		},
+		"ad133743-3163-4629-a234-292e9a55cf52": {
+			"id": "ad133743-3163-4629-a234-292e9a55cf52",
+			"visible": true,
+			"name": "producto_detalles_farmaceuticos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "8bc30bfc-413d-4d45-8d7b-cfb5b60e6458",
+			"parent": "54d9f5d0-b8ba-4af3-9e8f-abcb8e532527",
+			"child": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "one",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "64dcb052-1278-4fd8-a3fb-d4779b9299e1",
+					"parentcol": "5e88dd59-7d30-4772-a871-be36e2ade81b",
+					"childcol": "dcce9906-b0f2-44b3-b266-e0efe9c89555"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
 		}
 	},
 	"notes": {},
@@ -2640,7 +2670,7 @@
 			"keywordCase": "upper",
 			"identiferCase": "lower"
 		},
-		"lastSaved": 1695366276000,
+		"lastSaved": 1700193719000,
 		"beforeScript": "PRAGMA writable_schema = 1;\ndelete from sqlite_master where type in ('view', 'table', 'index', 'trigger');\nPRAGMA writable_schema = 0;",
 		"authorName": "",
 		"companyDetails": "",
@@ -2648,7 +2678,7 @@
 		"laststoredin": {
 			"major": 7,
 			"minor": 4,
-			"extra": 1
+			"extra": 2
 		}
 	},
 	"otherObjects": {},
@@ -2659,7 +2689,7 @@
 			"id": "b3c41293-7932-4ebb-a1cd-09b78d1bd05c",
 			"keysgraphics": true,
 			"linegraphics": "detailed",
-			"zoom": 0.8,
+			"zoom": 0.5,
 			"background": "transparent",
 			"lineColor": "transparent",
 			"isOpen": true,
@@ -2667,9 +2697,9 @@
 			"diagramItems": {
 				"54d9f5d0-b8ba-4af3-9e8f-abcb8e532527": {
 					"referencedItemId": "54d9f5d0-b8ba-4af3-9e8f-abcb8e532527",
-					"x": 853,
-					"y": 40,
-					"gHeight": 290,
+					"x": 100,
+					"y": 90,
+					"gHeight": 146,
 					"gWidth": 276,
 					"color": "#ffffff",
 					"background": "#03a9f4",
@@ -2679,8 +2709,8 @@
 				},
 				"42e3a246-4bed-4c18-91ff-667f046702ef": {
 					"referencedItemId": "42e3a246-4bed-4c18-91ff-667f046702ef",
-					"x": 495,
-					"y": 399,
+					"x": 575,
+					"y": 140,
 					"gHeight": 128,
 					"gWidth": 229,
 					"color": "#ffffff",
@@ -2691,8 +2721,8 @@
 				},
 				"15b01cb9-6794-4bb2-a490-6675a8672c6d": {
 					"referencedItemId": "15b01cb9-6794-4bb2-a490-6675a8672c6d",
-					"x": 1214,
-					"y": 503,
+					"x": 1979,
+					"y": 557,
 					"gHeight": 99,
 					"gWidth": 172,
 					"color": "#ffffff",
@@ -2703,8 +2733,8 @@
 				},
 				"926d412a-896d-45a1-8f48-26ede035acbe": {
 					"referencedItemId": "926d412a-896d-45a1-8f48-26ede035acbe",
-					"x": 854,
-					"y": 694,
+					"x": 1495,
+					"y": 557,
 					"gHeight": 92,
 					"gWidth": 181,
 					"color": "#ffffff",
@@ -2715,8 +2745,8 @@
 				},
 				"7455120e-5bf6-41ee-bcd1-4b7ae98d7e24": {
 					"referencedItemId": "7455120e-5bf6-41ee-bcd1-4b7ae98d7e24",
-					"x": 852,
-					"y": 824,
+					"x": 1495,
+					"y": 670,
 					"gHeight": 92,
 					"gWidth": 198,
 					"color": "#ffffff",
@@ -2727,8 +2757,8 @@
 				},
 				"ae5df498-fa03-4678-b972-fba8fcf327a9": {
 					"referencedItemId": "ae5df498-fa03-4678-b972-fba8fcf327a9",
-					"x": 1214,
-					"y": 130,
+					"x": 575,
+					"y": 835,
 					"gHeight": 110,
 					"gWidth": 271,
 					"color": "#ffffff",
@@ -2739,8 +2769,8 @@
 				},
 				"abbd253e-820f-488c-8350-740860d7e1d7": {
 					"referencedItemId": "abbd253e-820f-488c-8350-740860d7e1d7",
-					"x": 1217,
-					"y": 366,
+					"x": 1003,
+					"y": 835,
 					"gHeight": 110,
 					"gWidth": 271,
 					"color": "#ffffff",
@@ -2751,8 +2781,8 @@
 				},
 				"1267450e-3f6c-4627-a0bb-15b2b590eb4d": {
 					"referencedItemId": "1267450e-3f6c-4627-a0bb-15b2b590eb4d",
-					"x": 1214,
-					"y": 250,
+					"x": 575,
+					"y": 1015,
 					"gHeight": 92,
 					"gWidth": 172,
 					"color": "#ffffff",
@@ -2763,8 +2793,8 @@
 				},
 				"a52241ae-68c0-4403-9430-9fd269e9005f": {
 					"referencedItemId": "a52241ae-68c0-4403-9430-9fd269e9005f",
-					"x": 853,
-					"y": 485,
+					"x": 1495,
+					"y": 318,
 					"gHeight": 171,
 					"gWidth": 268,
 					"color": "#ffffff",
@@ -2775,8 +2805,8 @@
 				},
 				"bc628677-8adc-4b66-9f1f-a4763574002a": {
 					"referencedItemId": "bc628677-8adc-4b66-9f1f-a4763574002a",
-					"x": 135,
-					"y": 664,
+					"x": 575,
+					"y": 318,
 					"gHeight": 189,
 					"gWidth": 275,
 					"color": "#ffffff",
@@ -2787,8 +2817,8 @@
 				},
 				"afc2b121-5ec5-4a7b-a89b-807d548a94f6": {
 					"referencedItemId": "afc2b121-5ec5-4a7b-a89b-807d548a94f6",
-					"x": 495,
-					"y": 682,
+					"x": 1003,
+					"y": 318,
 					"gHeight": 182,
 					"gWidth": 273,
 					"color": "#ffffff",
@@ -2799,8 +2829,8 @@
 				},
 				"2562a238-d84e-4a02-886c-d1a00e80f1da": {
 					"referencedItemId": "2562a238-d84e-4a02-886c-d1a00e80f1da",
-					"x": 495,
-					"y": 874,
+					"x": 1003,
+					"y": 557,
 					"gHeight": 92,
 					"gWidth": 200,
 					"color": "#ffffff",
@@ -2811,8 +2841,8 @@
 				},
 				"98343e0d-4d7a-40f8-8799-edeaf640c61f": {
 					"referencedItemId": "98343e0d-4d7a-40f8-8799-edeaf640c61f",
-					"x": 498,
-					"y": 278,
+					"x": 1979,
+					"y": 835,
 					"gHeight": 81,
 					"gWidth": 193,
 					"color": "#ffffff",
@@ -2823,8 +2853,8 @@
 				},
 				"dc905fb6-7d89-4cde-b521-46e489492434": {
 					"referencedItemId": "dc905fb6-7d89-4cde-b521-46e489492434",
-					"x": 496,
-					"y": 124,
+					"x": 1003,
+					"y": 670,
 					"gHeight": 63,
 					"gWidth": 172,
 					"color": "#ffffff",
@@ -2835,8 +2865,8 @@
 				},
 				"6ad777b1-3188-44ba-9fcd-00d70f5efdcd": {
 					"referencedItemId": "6ad777b1-3188-44ba-9fcd-00d70f5efdcd",
-					"x": 495,
-					"y": 40,
+					"x": 575,
+					"y": 557,
 					"gHeight": 63,
 					"gWidth": 252,
 					"color": "#ffffff",
@@ -2847,8 +2877,8 @@
 				},
 				"28f22c92-d0d5-436f-9495-668d2f0c0841": {
 					"referencedItemId": "28f22c92-d0d5-436f-9495-668d2f0c0841",
-					"x": 853,
-					"y": 362,
+					"x": 1003,
+					"y": 140,
 					"gHeight": 63,
 					"gWidth": 216,
 					"color": "#ffffff",
@@ -2859,8 +2889,8 @@
 				},
 				"f98e2dbd-a20b-48f7-992c-8e5ccc441c6c": {
 					"referencedItemId": "f98e2dbd-a20b-48f7-992c-8e5ccc441c6c",
-					"x": 495,
-					"y": 537,
+					"x": 1979,
+					"y": 318,
 					"gHeight": 135,
 					"gWidth": 233,
 					"color": "#ffffff",
@@ -2871,8 +2901,8 @@
 				},
 				"b167f4f3-0d31-4dbe-815b-61f988e5f622": {
 					"referencedItemId": "b167f4f3-0d31-4dbe-815b-61f988e5f622",
-					"x": 495,
-					"y": 198,
+					"x": 1495,
+					"y": 835,
 					"gHeight": 67,
 					"gWidth": 255,
 					"color": "#ffffff",
@@ -2880,6 +2910,19 @@
 					"resized": true,
 					"autoExpand": true,
 					"backgroundOpacity": "10"
+				},
+				"bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41": {
+					"referencedItemId": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
+					"x": 575,
+					"y": 670,
+					"gHeight": 135,
+					"gWidth": 252,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true,
+					"backgroundOpacity": "10",
+					"collapsed": false
 				}
 			},
 			"scroll": {
@@ -2928,6 +2971,7 @@
 		"28f22c92-d0d5-436f-9495-668d2f0c0841",
 		"f98e2dbd-a20b-48f7-992c-8e5ccc441c6c",
 		"b167f4f3-0d31-4dbe-815b-61f988e5f622",
+		"bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
 		"d7cf1942-f38d-465b-96b7-c65417610477",
 		"2936b30e-1e7c-4a00-b94a-f2480091b89b",
 		"81b69ae1-e204-41b2-bc0b-241d7fa6c252",
@@ -2945,7 +2989,8 @@
 		"3eba47f8-5f3c-4fbf-be46-8c4f3af8d071",
 		"2924772f-54d2-4134-98ac-0999bab95116",
 		"2e8fc1ce-8802-423b-b5f3-8bbfae0a31c1",
-		"d168ebd4-e400-4f63-9529-d7b3a08b5b36"
+		"d168ebd4-e400-4f63-9529-d7b3a08b5b36",
+		"ad133743-3163-4629-a234-292e9a55cf52"
 	],
 	"collapsedTreeItems": [],
 	"reverseStats": {}

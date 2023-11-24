@@ -1,5 +1,16 @@
 {
   "editor.fontSize": 13,
   "editor.tabSize": 2,
-  "editor.renderWhitespace": "boundary"
+  "editor.renderWhitespace": "boundary",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true,
+    "**/.*": true,
+    "**/*code-workspace": true
+  }
 }

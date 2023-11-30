@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="images">
+    <file>logo_circular_64x54.png</file>
+  </qresource>
+  <qresource prefix="widgets">
+    <file>producto_widget.ui</file>
+  </qresource>
+</RCC>

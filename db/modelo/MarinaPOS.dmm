@@ -38,66 +38,14 @@
 						"autoincrement": false
 					},
 					"estimatedSize": ""
-				},
-				{
-					"id": "84cc130a-270f-4ee2-9b12-0553d9208ab6",
-					"name": "cantidad",
-					"datatype": "INTEGER",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "427a0fb9-0415-42e6-be6e-0b77e740e2b8",
-					"name": "forma_farmaceutica_id",
-					"datatype": "INTEGER",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"param": "",
-					"estimatedSize": "",
-					"fk": true
-				},
-				{
-					"id": "9fa4c469-030c-4ecd-a1dc-37bedf6b7af9",
-					"name": "laboratorio_id",
-					"datatype": "INTEGER",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"fk": true,
-					"param": "",
-					"estimatedSize": ""
 				}
 			],
 			"relations": [
 				"d7cf1942-f38d-465b-96b7-c65417610477",
-				"4704d71e-59e3-4855-af1b-15eb4de71a68",
 				"6ffd5002-15a6-455f-96bc-0cfc0cfce9a4",
-				"f2068df5-576a-4b02-8170-accffdc6e54c",
 				"844d8b46-9d0f-4c65-a255-9d60f11560bf",
 				"09d8f4ff-56b9-425b-9bb1-db75e1abff80",
-				"ad133743-3163-4629-a234-292e9a55cf52"
+				"d57573f9-14b9-49b8-b330-44f03ff40c60"
 			],
 			"lines": [],
 			"keys": [
@@ -765,8 +713,8 @@
 				}
 			],
 			"relations": [
-				"f2068df5-576a-4b02-8170-accffdc6e54c",
-				"3b6d2318-0049-4435-b791-3cac5b7bfabe"
+				"3b6d2318-0049-4435-b791-3cac5b7bfabe",
+				"012d474d-bb29-4bfd-be10-982193ddad9d"
 			],
 			"lines": [],
 			"keys": [
@@ -854,8 +802,8 @@
 				},
 				{
 					"id": "068ad900-698a-4d10-8f6e-a29756712635",
-					"name": "descripcion",
-					"datatype": "TEXT",
+					"name": "es_liquido",
+					"datatype": "BOOLEAN",
 					"param": "",
 					"pk": false,
 					"nn": true,
@@ -959,7 +907,7 @@
 				}
 			],
 			"relations": [
-				"4704d71e-59e3-4855-af1b-15eb4de71a68"
+				"71bc53c2-2380-4d3d-912a-ca1af8671788"
 			],
 			"lines": [],
 			"keys": [
@@ -1147,7 +1095,8 @@
 			"relations": [
 				"4c75c1dd-4e27-494d-828b-c8fd082ee116",
 				"80dadb0d-a27f-4d15-9de4-4f56cf27ad0b",
-				"d168ebd4-e400-4f63-9529-d7b3a08b5b36"
+				"d168ebd4-e400-4f63-9529-d7b3a08b5b36",
+				"27f39515-6cc5-4817-9fb1-bd71528da25a"
 			],
 			"lines": [],
 			"keys": [
@@ -1203,8 +1152,8 @@
 					"estimatedSize": ""
 				},
 				{
-					"id": "0cd55825-9497-4ac7-8c23-2bc2f83e4b72",
-					"name": "documento_id",
+					"id": "e3d323f5-131c-401e-9dc8-a3580b90dec9",
+					"name": "producto_id",
 					"datatype": "INTEGER",
 					"pk": false,
 					"nn": true,
@@ -1220,8 +1169,25 @@
 					"fk": true
 				},
 				{
-					"id": "e3d323f5-131c-401e-9dc8-a3580b90dec9",
-					"name": "producto_id",
+					"id": "581ec06b-3ff5-4745-9984-23bd8edb6538",
+					"name": "turno_id",
+					"datatype": "INTEGER",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"param": "",
+					"estimatedSize": "",
+					"fk": true
+				},
+				{
+					"id": "0cd55825-9497-4ac7-8c23-2bc2f83e4b72",
+					"name": "documento_id",
 					"datatype": "INTEGER",
 					"pk": false,
 					"nn": true,
@@ -1342,7 +1308,8 @@
 			"relations": [
 				"6ffd5002-15a6-455f-96bc-0cfc0cfce9a4",
 				"b208818c-e810-4056-b392-6ebac8ae4c50",
-				"97148ba7-a399-4e3e-9aee-1eba34b6d4b8"
+				"97148ba7-a399-4e3e-9aee-1eba34b6d4b8",
+				"27f39515-6cc5-4817-9fb1-bd71528da25a"
 			],
 			"lines": [],
 			"keys": [
@@ -1459,92 +1426,6 @@
 				"strict": false
 			}
 		},
-		"98343e0d-4d7a-40f8-8799-edeaf640c61f": {
-			"id": "98343e0d-4d7a-40f8-8799-edeaf640c61f",
-			"visible": true,
-			"name": "codigo_atc",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "e2b32fe3-dda0-4e5f-a473-33583ca0e9a2",
-					"name": "id",
-					"datatype": "INTEGER",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"collation": "",
-					"sqlite": {
-						"autoincrement": true
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "62e21bb9-2c6a-405d-8190-285cf5970eda",
-					"name": "nombre",
-					"datatype": "TEXT",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				},
-				{
-					"id": "09c8c649-78d0-4b4f-aa17-2a0eb502d4c0",
-					"name": "descripcion",
-					"datatype": "TEXT",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": ""
-				}
-			],
-			"relations": [
-				"3eba47f8-5f3c-4fbf-be46-8c4f3af8d071"
-			],
-			"lines": [],
-			"keys": [
-				{
-					"id": "a0e89f0c-874b-4f79-9ad0-9c8512c0b520",
-					"name": "Primary key",
-					"isPk": true,
-					"cols": [
-						{
-							"id": "cb67a550-2f18-4d1d-b8ac-7954f441fdc7",
-							"colid": "e2b32fe3-dda0-4e5f-a473-33583ca0e9a2"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"customCode": "",
-			"beforeScript": "",
-			"afterScript": "",
-			"sqlite": {
-				"withoutrowid": false,
-				"strict": false
-			}
-		},
 		"dc905fb6-7d89-4cde-b521-46e489492434": {
 			"id": "dc905fb6-7d89-4cde-b521-46e489492434",
 			"visible": true,
@@ -1587,8 +1468,7 @@
 				}
 			],
 			"relations": [
-				"c4514096-3874-4c29-8128-a886b5181265",
-				"2924772f-54d2-4134-98ac-0999bab95116"
+				"c4514096-3874-4c29-8128-a886b5181265"
 			],
 			"lines": [],
 			"keys": [
@@ -1719,7 +1599,7 @@
 				},
 				{
 					"id": "11955f80-cb3c-4074-bf87-d54f62520b70",
-					"name": "nombre_detalle",
+					"name": "nombre",
 					"datatype": "TEXT",
 					"param": "",
 					"pk": false,
@@ -1900,84 +1780,6 @@
 				"strict": false
 			}
 		},
-		"b167f4f3-0d31-4dbe-815b-61f988e5f622": {
-			"id": "b167f4f3-0d31-4dbe-815b-61f988e5f622",
-			"visible": true,
-			"name": "principio_activo_y_codigo_atc",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "affad223-9eba-416d-8eb5-5aaafd8b2ecf",
-					"name": "codigo_atc_id",
-					"datatype": "INTEGER",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"collation": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": "",
-					"fk": true
-				},
-				{
-					"id": "b8127ca5-b2bd-439c-a724-fd3aa018b34f",
-					"name": "principio_activo_id",
-					"datatype": "INTEGER",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"after": "",
-					"collation": "",
-					"sqlite": {
-						"autoincrement": false
-					},
-					"estimatedSize": "",
-					"fk": true
-				}
-			],
-			"relations": [
-				"3eba47f8-5f3c-4fbf-be46-8c4f3af8d071",
-				"2924772f-54d2-4134-98ac-0999bab95116"
-			],
-			"lines": [],
-			"keys": [
-				{
-					"id": "747c9a72-69f7-4736-bd7d-6d19e5eff337",
-					"name": "Primary key",
-					"isPk": true,
-					"cols": [
-						{
-							"id": "8fa68340-c1e0-4c09-a14d-22dce4955589",
-							"colid": "affad223-9eba-416d-8eb5-5aaafd8b2ecf"
-						},
-						{
-							"id": "cdd55a62-3c89-443a-b6ec-a300553d33ae",
-							"colid": "b8127ca5-b2bd-439c-a724-fd3aa018b34f"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"customCode": "",
-			"beforeScript": "",
-			"afterScript": "",
-			"sqlite": {
-				"withoutrowid": false,
-				"strict": false
-			}
-		},
 		"bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41": {
 			"id": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
 			"visible": true,
@@ -2001,11 +1803,80 @@
 						"autoincrement": false
 					},
 					"estimatedSize": "",
+					"fk": false
+				},
+				{
+					"id": "41128db5-42bb-4b71-9ed4-7f61b49546bc",
+					"name": "producto_id",
+					"datatype": "INTEGER",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"param": "",
+					"estimatedSize": "",
+					"fk": true
+				},
+				{
+					"id": "82fe438c-020a-4737-93c7-111bf4af2677",
+					"name": "categoria_farmacologica_id",
+					"datatype": "INTEGER",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"collation": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": true
+				},
+				{
+					"id": "fd96fa98-ed23-4ddd-8abd-4e8a248a0969",
+					"name": "laboratorio_id",
+					"datatype": "INTEGER",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"param": "",
+					"estimatedSize": "",
+					"fk": true
+				},
+				{
+					"id": "45009d1e-2143-4e6b-963a-ef021e9cdd40",
+					"name": "forma_farmaceutica_id",
+					"datatype": "INTEGER",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"param": "",
+					"estimatedSize": "",
 					"fk": true
 				},
 				{
 					"id": "0154c49f-a195-48ee-a532-68afbd870aa6",
-					"name": "cenabast❓",
+					"name": "es_cenabast",
 					"datatype": "BOOLEAN",
 					"param": "",
 					"pk": false,
@@ -2022,7 +1893,7 @@
 				},
 				{
 					"id": "a62496e8-2ac2-4412-b1da-fb7f8dcdac61",
-					"name": "controlado❓",
+					"name": "es_controlado",
 					"datatype": "BOOLEAN",
 					"param": "",
 					"pk": false,
@@ -2039,7 +1910,7 @@
 				},
 				{
 					"id": "93b27304-35ce-445d-9f26-8c0e38c60dd4",
-					"name": "refrigerado❓",
+					"name": "es_refrigerado",
 					"datatype": "BOOLEAN",
 					"param": "",
 					"pk": false,
@@ -2056,7 +1927,7 @@
 				},
 				{
 					"id": "f7ed2318-c370-4763-adfc-e2d095658b12",
-					"name": "bioequivalente❓",
+					"name": "es_bioequivalente",
 					"datatype": "BOOLEAN",
 					"param": "",
 					"pk": false,
@@ -2073,8 +1944,94 @@
 				},
 				{
 					"id": "c3ff4ed0-da1b-44f9-b7e0-4427c4e2494c",
-					"name": "generico❓",
+					"name": "es_generico",
 					"datatype": "BOOLEAN",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": "",
+					"fk": false
+				},
+				{
+					"id": "c6ad8858-f338-49a9-95cc-9890b312174c",
+					"name": "cantidad_por_envase",
+					"datatype": "INTEGER",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"sqlite": {
+						"autoincrement": false
+					},
+					"estimatedSize": ""
+				}
+			],
+			"relations": [
+				"d57573f9-14b9-49b8-b330-44f03ff40c60",
+				"2f6e84e3-ecbe-4cd5-9abf-657a5bbb59bc",
+				"71bc53c2-2380-4d3d-912a-ca1af8671788",
+				"012d474d-bb29-4bfd-be10-982193ddad9d"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "3b7b9bb0-b6f4-4ec7-b653-39abc8acbe81",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"beforeScript": "",
+			"afterScript": "",
+			"sqlite": {
+				"withoutrowid": false,
+				"strict": false
+			}
+		},
+		"7f9d8c52-d4ee-4532-b63d-91e6920a1bd9": {
+			"id": "7f9d8c52-d4ee-4532-b63d-91e6920a1bd9",
+			"visible": true,
+			"name": "categoria_farmacologica",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "33cffe26-b31d-4180-a938-c6e53e38228a",
+					"name": "id",
+					"datatype": "INTEGER",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"after": "",
+					"collation": "",
+					"sqlite": {
+						"autoincrement": true
+					},
+					"estimatedSize": "",
+					"fk": false
+				},
+				{
+					"id": "7742a990-77d5-4d12-9774-53f12e99749b",
+					"name": "nombre",
+					"datatype": "TEXT",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -2090,23 +2047,44 @@
 				}
 			],
 			"relations": [
-				"ad133743-3163-4629-a234-292e9a55cf52"
+				"2f6e84e3-ecbe-4cd5-9abf-657a5bbb59bc"
 			],
 			"lines": [],
 			"keys": [
 				{
-					"id": "3b7b9bb0-b6f4-4ec7-b653-39abc8acbe81",
+					"id": "373badb0-6cb7-43a8-a023-5f04dc643e3b",
 					"name": "Primary key",
 					"isPk": true,
 					"cols": [
 						{
-							"id": "7549201c-b797-4535-bf01-4938703bdc8a",
-							"colid": "dcce9906-b0f2-44b3-b266-e0efe9c89555"
+							"id": "33f3856c-df4f-44a8-b892-5a3daa8f63d1",
+							"colid": "33cffe26-b31d-4180-a938-c6e53e38228a"
 						}
 					]
 				}
 			],
-			"indexes": [],
+			"indexes": [
+				{
+					"id": "4435dab7-acec-475a-9887-a156a5ef1acc",
+					"name": "estado_movimiento_ix_1",
+					"unique": true,
+					"sqlite": {
+						"expression": "",
+						"desc": ""
+					},
+					"cols": [
+						{
+							"id": "5b0e9a04-7a88-438c-aa20-e84336cc57ba",
+							"colid": "7742a990-77d5-4d12-9774-53f12e99749b",
+							"sqlite": {
+								"desc": false,
+								"collate": "",
+								"expression": ""
+							}
+						}
+					]
+				}
+			],
 			"embeddable": false,
 			"generate": true,
 			"generateCustomCode": true,
@@ -2201,33 +2179,6 @@
 			"customCode": "",
 			"relationColor": "transparent"
 		},
-		"4704d71e-59e3-4855-af1b-15eb4de71a68": {
-			"id": "4704d71e-59e3-4855-af1b-15eb4de71a68",
-			"visible": true,
-			"name": "laboratorio_producto",
-			"desc": "",
-			"type": "identifying",
-			"parent_key": "21843550-e1f9-484d-9254-39014bd0cb64",
-			"parent": "1267450e-3f6c-4627-a0bb-15b2b590eb4d",
-			"child": "54d9f5d0-b8ba-4af3-9e8f-abcb8e532527",
-			"c_mp": "true",
-			"c_mch": "true",
-			"c_p": "one",
-			"c_ch": "many",
-			"c_cp": "",
-			"c_cch": "",
-			"cols": [
-				{
-					"id": "945ced30-f089-4ec5-8535-5efbafb5cb64",
-					"parentcol": "e995d30d-3f7d-4a9e-9937-28a0c8e0d8c0",
-					"childcol": "9fa4c469-030c-4ecd-a1dc-37bedf6b7af9"
-				}
-			],
-			"generate": true,
-			"generateCustomCode": true,
-			"customCode": "",
-			"relationColor": "transparent"
-		},
 		"4c75c1dd-4e27-494d-828b-c8fd082ee116": {
 			"id": "4c75c1dd-4e27-494d-828b-c8fd082ee116",
 			"visible": true,
@@ -2302,33 +2253,6 @@
 					"id": "e770df21-1fce-4fe6-8861-53c34554e1f0",
 					"parentcol": "5e88dd59-7d30-4772-a871-be36e2ade81b",
 					"childcol": "e3d323f5-131c-401e-9dc8-a3580b90dec9"
-				}
-			],
-			"generate": true,
-			"generateCustomCode": true,
-			"customCode": "",
-			"relationColor": "transparent"
-		},
-		"f2068df5-576a-4b02-8170-accffdc6e54c": {
-			"id": "f2068df5-576a-4b02-8170-accffdc6e54c",
-			"visible": true,
-			"name": "forma_farmaceutica_producto",
-			"desc": "",
-			"type": "identifying",
-			"parent_key": "e561eaf5-8878-4781-be41-2bb0ccd6c39b",
-			"parent": "ae5df498-fa03-4678-b972-fba8fcf327a9",
-			"child": "54d9f5d0-b8ba-4af3-9e8f-abcb8e532527",
-			"c_mp": "true",
-			"c_mch": "true",
-			"c_p": "one",
-			"c_ch": "many",
-			"c_cp": "",
-			"c_cch": "",
-			"cols": [
-				{
-					"id": "7e0b80e8-98dd-4a65-ba1d-a103078c38c2",
-					"parentcol": "1282bc5e-e7cc-4641-94aa-85df210ed08b",
-					"childcol": "427a0fb9-0415-42e6-be6e-0b77e740e2b8"
 				}
 			],
 			"generate": true,
@@ -2498,60 +2422,6 @@
 			"customCode": "",
 			"relationColor": "transparent"
 		},
-		"2924772f-54d2-4134-98ac-0999bab95116": {
-			"id": "2924772f-54d2-4134-98ac-0999bab95116",
-			"visible": true,
-			"name": "principio_activo_principio_activo_y_codigo_atc",
-			"desc": "",
-			"type": "identifying",
-			"parent_key": "94c24a3b-65d9-473f-af33-b4429c5292db",
-			"parent": "dc905fb6-7d89-4cde-b521-46e489492434",
-			"child": "b167f4f3-0d31-4dbe-815b-61f988e5f622",
-			"c_mp": "true",
-			"c_mch": "true",
-			"c_p": "one",
-			"c_ch": "many",
-			"c_cp": "",
-			"c_cch": "",
-			"cols": [
-				{
-					"id": "a65f0dcf-3732-41c3-9cc9-843107976cbc",
-					"parentcol": "1f036bbd-aafb-437b-a029-debbe0977d88",
-					"childcol": "b8127ca5-b2bd-439c-a724-fd3aa018b34f"
-				}
-			],
-			"generate": true,
-			"generateCustomCode": true,
-			"customCode": "",
-			"relationColor": "transparent"
-		},
-		"3eba47f8-5f3c-4fbf-be46-8c4f3af8d071": {
-			"id": "3eba47f8-5f3c-4fbf-be46-8c4f3af8d071",
-			"visible": true,
-			"name": "codigo_atc_principio_activo_y_codigo_atc",
-			"desc": "",
-			"type": "identifying",
-			"parent_key": "a0e89f0c-874b-4f79-9ad0-9c8512c0b520",
-			"parent": "98343e0d-4d7a-40f8-8799-edeaf640c61f",
-			"child": "b167f4f3-0d31-4dbe-815b-61f988e5f622",
-			"c_mp": "true",
-			"c_mch": "true",
-			"c_p": "one",
-			"c_ch": "many",
-			"c_cp": "",
-			"c_cch": "",
-			"cols": [
-				{
-					"id": "dd3ffbab-5922-4a98-a19d-ec2c7ff452fb",
-					"parentcol": "e2b32fe3-dda0-4e5f-a473-33583ca0e9a2",
-					"childcol": "affad223-9eba-416d-8eb5-5aaafd8b2ecf"
-				}
-			],
-			"generate": true,
-			"generateCustomCode": true,
-			"customCode": "",
-			"relationColor": "transparent"
-		},
 		"2e8fc1ce-8802-423b-b5f3-8bbfae0a31c1": {
 			"id": "2e8fc1ce-8802-423b-b5f3-8bbfae0a31c1",
 			"visible": true,
@@ -2606,8 +2476,8 @@
 			"customCode": "",
 			"relationColor": "transparent"
 		},
-		"ad133743-3163-4629-a234-292e9a55cf52": {
-			"id": "ad133743-3163-4629-a234-292e9a55cf52",
+		"d57573f9-14b9-49b8-b330-44f03ff40c60": {
+			"id": "d57573f9-14b9-49b8-b330-44f03ff40c60",
 			"visible": true,
 			"name": "producto_detalles_farmaceuticos",
 			"desc": "",
@@ -2618,14 +2488,122 @@
 			"c_mp": "true",
 			"c_mch": "true",
 			"c_p": "one",
-			"c_ch": "one",
+			"c_ch": "many",
 			"c_cp": "",
 			"c_cch": "",
 			"cols": [
 				{
-					"id": "64dcb052-1278-4fd8-a3fb-d4779b9299e1",
+					"id": "a7d173c1-0800-4c06-95f4-4d70e7bb6f45",
 					"parentcol": "5e88dd59-7d30-4772-a871-be36e2ade81b",
-					"childcol": "dcce9906-b0f2-44b3-b266-e0efe9c89555"
+					"childcol": "41128db5-42bb-4b71-9ed4-7f61b49546bc"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"2f6e84e3-ecbe-4cd5-9abf-657a5bbb59bc": {
+			"id": "2f6e84e3-ecbe-4cd5-9abf-657a5bbb59bc",
+			"visible": true,
+			"name": "categoria_farmacologica_detalles_farmaceuticos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "373badb0-6cb7-43a8-a023-5f04dc643e3b",
+			"parent": "7f9d8c52-d4ee-4532-b63d-91e6920a1bd9",
+			"child": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "770820ad-6f9d-48ef-85c1-1c077f13d2d4",
+					"parentcol": "33cffe26-b31d-4180-a938-c6e53e38228a",
+					"childcol": "82fe438c-020a-4737-93c7-111bf4af2677"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"71bc53c2-2380-4d3d-912a-ca1af8671788": {
+			"id": "71bc53c2-2380-4d3d-912a-ca1af8671788",
+			"visible": true,
+			"name": "laboratorio_detalles_farmaceuticos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "21843550-e1f9-484d-9254-39014bd0cb64",
+			"parent": "1267450e-3f6c-4627-a0bb-15b2b590eb4d",
+			"child": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "73a19cbf-d068-4c79-8de6-f38cd5e07387",
+					"parentcol": "e995d30d-3f7d-4a9e-9937-28a0c8e0d8c0",
+					"childcol": "fd96fa98-ed23-4ddd-8abd-4e8a248a0969"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"012d474d-bb29-4bfd-be10-982193ddad9d": {
+			"id": "012d474d-bb29-4bfd-be10-982193ddad9d",
+			"visible": true,
+			"name": "forma_farmaceutica_detalles_farmaceuticos",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e561eaf5-8878-4781-be41-2bb0ccd6c39b",
+			"parent": "ae5df498-fa03-4678-b972-fba8fcf327a9",
+			"child": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "75bf7e0a-8b37-4576-9830-a0b13a2fc5f2",
+					"parentcol": "1282bc5e-e7cc-4641-94aa-85df210ed08b",
+					"childcol": "45009d1e-2143-4e6b-963a-ef021e9cdd40"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"customCode": "",
+			"relationColor": "transparent"
+		},
+		"27f39515-6cc5-4817-9fb1-bd71528da25a": {
+			"id": "27f39515-6cc5-4817-9fb1-bd71528da25a",
+			"visible": true,
+			"name": "turno_movimiento",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "47208fb9-6479-4418-9683-2673180a8c1a",
+			"parent": "a52241ae-68c0-4403-9430-9fd269e9005f",
+			"child": "bc628677-8adc-4b66-9f1f-a4763574002a",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "8f38a4cf-77b5-4ce6-a877-843e90eed241",
+					"parentcol": "122debd9-595f-4a06-8bc2-dcfbe2509fc1",
+					"childcol": "581ec06b-3ff5-4745-9984-23bd8edb6538"
 				}
 			],
 			"generate": true,
@@ -2670,7 +2648,7 @@
 			"keywordCase": "upper",
 			"identiferCase": "lower"
 		},
-		"lastSaved": 1700193719000,
+		"lastSaved": 1700965180000,
 		"beforeScript": "PRAGMA writable_schema = 1;\ndelete from sqlite_master where type in ('view', 'table', 'index', 'trigger');\nPRAGMA writable_schema = 0;",
 		"authorName": "",
 		"companyDetails": "",
@@ -2689,7 +2667,7 @@
 			"id": "b3c41293-7932-4ebb-a1cd-09b78d1bd05c",
 			"keysgraphics": true,
 			"linegraphics": "detailed",
-			"zoom": 0.5,
+			"zoom": 0.9,
 			"background": "transparent",
 			"lineColor": "transparent",
 			"isOpen": true,
@@ -2697,10 +2675,10 @@
 			"diagramItems": {
 				"54d9f5d0-b8ba-4af3-9e8f-abcb8e532527": {
 					"referencedItemId": "54d9f5d0-b8ba-4af3-9e8f-abcb8e532527",
-					"x": 100,
-					"y": 90,
-					"gHeight": 146,
-					"gWidth": 276,
+					"x": 883,
+					"y": 40,
+					"gHeight": 92,
+					"gWidth": 172,
 					"color": "#ffffff",
 					"background": "#03a9f4",
 					"resized": false,
@@ -2709,8 +2687,8 @@
 				},
 				"42e3a246-4bed-4c18-91ff-667f046702ef": {
 					"referencedItemId": "42e3a246-4bed-4c18-91ff-667f046702ef",
-					"x": 575,
-					"y": 140,
+					"x": 495,
+					"y": 113,
 					"gHeight": 128,
 					"gWidth": 229,
 					"color": "#ffffff",
@@ -2721,8 +2699,8 @@
 				},
 				"15b01cb9-6794-4bb2-a490-6675a8672c6d": {
 					"referencedItemId": "15b01cb9-6794-4bb2-a490-6675a8672c6d",
-					"x": 1979,
-					"y": 557,
+					"x": 1287,
+					"y": 359,
 					"gHeight": 99,
 					"gWidth": 172,
 					"color": "#ffffff",
@@ -2733,8 +2711,8 @@
 				},
 				"926d412a-896d-45a1-8f48-26ede035acbe": {
 					"referencedItemId": "926d412a-896d-45a1-8f48-26ede035acbe",
-					"x": 1495,
-					"y": 557,
+					"x": 883,
+					"y": 522,
 					"gHeight": 92,
 					"gWidth": 181,
 					"color": "#ffffff",
@@ -2745,8 +2723,8 @@
 				},
 				"7455120e-5bf6-41ee-bcd1-4b7ae98d7e24": {
 					"referencedItemId": "7455120e-5bf6-41ee-bcd1-4b7ae98d7e24",
-					"x": 1495,
-					"y": 670,
+					"x": 883,
+					"y": 624,
 					"gHeight": 92,
 					"gWidth": 198,
 					"color": "#ffffff",
@@ -2757,8 +2735,8 @@
 				},
 				"ae5df498-fa03-4678-b972-fba8fcf327a9": {
 					"referencedItemId": "ae5df498-fa03-4678-b972-fba8fcf327a9",
-					"x": 575,
-					"y": 835,
+					"x": 883,
+					"y": 1042,
 					"gHeight": 110,
 					"gWidth": 271,
 					"color": "#ffffff",
@@ -2769,8 +2747,8 @@
 				},
 				"abbd253e-820f-488c-8350-740860d7e1d7": {
 					"referencedItemId": "abbd253e-820f-488c-8350-740860d7e1d7",
-					"x": 1003,
-					"y": 835,
+					"x": 1287,
+					"y": 1078,
 					"gHeight": 110,
 					"gWidth": 271,
 					"color": "#ffffff",
@@ -2781,8 +2759,8 @@
 				},
 				"1267450e-3f6c-4627-a0bb-15b2b590eb4d": {
 					"referencedItemId": "1267450e-3f6c-4627-a0bb-15b2b590eb4d",
-					"x": 575,
-					"y": 1015,
+					"x": 883,
+					"y": 940,
 					"gHeight": 92,
 					"gWidth": 172,
 					"color": "#ffffff",
@@ -2793,8 +2771,8 @@
 				},
 				"a52241ae-68c0-4403-9430-9fd269e9005f": {
 					"referencedItemId": "a52241ae-68c0-4403-9430-9fd269e9005f",
-					"x": 1495,
-					"y": 318,
+					"x": 883,
+					"y": 308,
 					"gHeight": 171,
 					"gWidth": 268,
 					"color": "#ffffff",
@@ -2805,9 +2783,9 @@
 				},
 				"bc628677-8adc-4b66-9f1f-a4763574002a": {
 					"referencedItemId": "bc628677-8adc-4b66-9f1f-a4763574002a",
-					"x": 575,
-					"y": 318,
-					"gHeight": 189,
+					"x": 135,
+					"y": 378,
+					"gHeight": 207,
 					"gWidth": 275,
 					"color": "#ffffff",
 					"background": "#03a9f4",
@@ -2817,8 +2795,8 @@
 				},
 				"afc2b121-5ec5-4a7b-a89b-807d548a94f6": {
 					"referencedItemId": "afc2b121-5ec5-4a7b-a89b-807d548a94f6",
-					"x": 1003,
-					"y": 318,
+					"x": 495,
+					"y": 396,
 					"gHeight": 182,
 					"gWidth": 273,
 					"color": "#ffffff",
@@ -2829,8 +2807,8 @@
 				},
 				"2562a238-d84e-4a02-886c-d1a00e80f1da": {
 					"referencedItemId": "2562a238-d84e-4a02-886c-d1a00e80f1da",
-					"x": 1003,
-					"y": 557,
+					"x": 495,
+					"y": 588,
 					"gHeight": 92,
 					"gWidth": 200,
 					"color": "#ffffff",
@@ -2839,22 +2817,10 @@
 					"autoExpand": true,
 					"backgroundOpacity": "10"
 				},
-				"98343e0d-4d7a-40f8-8799-edeaf640c61f": {
-					"referencedItemId": "98343e0d-4d7a-40f8-8799-edeaf640c61f",
-					"x": 1979,
-					"y": 835,
-					"gHeight": 81,
-					"gWidth": 193,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true,
-					"backgroundOpacity": "10"
-				},
 				"dc905fb6-7d89-4cde-b521-46e489492434": {
 					"referencedItemId": "dc905fb6-7d89-4cde-b521-46e489492434",
-					"x": 1003,
-					"y": 670,
+					"x": 883,
+					"y": 142,
 					"gHeight": 63,
 					"gWidth": 172,
 					"color": "#ffffff",
@@ -2865,8 +2831,8 @@
 				},
 				"6ad777b1-3188-44ba-9fcd-00d70f5efdcd": {
 					"referencedItemId": "6ad777b1-3188-44ba-9fcd-00d70f5efdcd",
-					"x": 575,
-					"y": 557,
+					"x": 495,
+					"y": 40,
 					"gHeight": 63,
 					"gWidth": 252,
 					"color": "#ffffff",
@@ -2877,10 +2843,10 @@
 				},
 				"28f22c92-d0d5-436f-9495-668d2f0c0841": {
 					"referencedItemId": "28f22c92-d0d5-436f-9495-668d2f0c0841",
-					"x": 1003,
-					"y": 140,
+					"x": 883,
+					"y": 215,
 					"gHeight": 63,
-					"gWidth": 216,
+					"gWidth": 172,
 					"color": "#ffffff",
 					"background": "#03a9f4",
 					"resized": false,
@@ -2889,8 +2855,8 @@
 				},
 				"f98e2dbd-a20b-48f7-992c-8e5ccc441c6c": {
 					"referencedItemId": "f98e2dbd-a20b-48f7-992c-8e5ccc441c6c",
-					"x": 1979,
-					"y": 318,
+					"x": 495,
+					"y": 251,
 					"gHeight": 135,
 					"gWidth": 233,
 					"color": "#ffffff",
@@ -2899,30 +2865,30 @@
 					"autoExpand": true,
 					"backgroundOpacity": "10"
 				},
-				"b167f4f3-0d31-4dbe-815b-61f988e5f622": {
-					"referencedItemId": "b167f4f3-0d31-4dbe-815b-61f988e5f622",
-					"x": 1495,
-					"y": 835,
-					"gHeight": 67,
-					"gWidth": 255,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": true,
-					"autoExpand": true,
-					"backgroundOpacity": "10"
-				},
 				"bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41": {
 					"referencedItemId": "bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
-					"x": 575,
-					"y": 670,
-					"gHeight": 135,
-					"gWidth": 252,
+					"x": 495,
+					"y": 690,
+					"gHeight": 225,
+					"gWidth": 303,
 					"color": "#ffffff",
 					"background": "#03a9f4",
 					"resized": false,
 					"autoExpand": true,
 					"backgroundOpacity": "10",
 					"collapsed": false
+				},
+				"7f9d8c52-d4ee-4532-b63d-91e6920a1bd9": {
+					"referencedItemId": "7f9d8c52-d4ee-4532-b63d-91e6920a1bd9",
+					"x": 883,
+					"y": 834,
+					"gHeight": 96,
+					"gWidth": 319,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true,
+					"backgroundOpacity": "10"
 				}
 			},
 			"scroll": {
@@ -2965,32 +2931,31 @@
 		"a52241ae-68c0-4403-9430-9fd269e9005f",
 		"bc628677-8adc-4b66-9f1f-a4763574002a",
 		"2562a238-d84e-4a02-886c-d1a00e80f1da",
-		"98343e0d-4d7a-40f8-8799-edeaf640c61f",
 		"dc905fb6-7d89-4cde-b521-46e489492434",
 		"6ad777b1-3188-44ba-9fcd-00d70f5efdcd",
 		"28f22c92-d0d5-436f-9495-668d2f0c0841",
 		"f98e2dbd-a20b-48f7-992c-8e5ccc441c6c",
-		"b167f4f3-0d31-4dbe-815b-61f988e5f622",
 		"bdc8a3fe-72fd-47bc-a8db-5dfe2d053a41",
+		"7f9d8c52-d4ee-4532-b63d-91e6920a1bd9",
 		"d7cf1942-f38d-465b-96b7-c65417610477",
 		"2936b30e-1e7c-4a00-b94a-f2480091b89b",
 		"81b69ae1-e204-41b2-bc0b-241d7fa6c252",
-		"4704d71e-59e3-4855-af1b-15eb4de71a68",
 		"4c75c1dd-4e27-494d-828b-c8fd082ee116",
 		"80dadb0d-a27f-4d15-9de4-4f56cf27ad0b",
 		"6ffd5002-15a6-455f-96bc-0cfc0cfce9a4",
-		"f2068df5-576a-4b02-8170-accffdc6e54c",
 		"b208818c-e810-4056-b392-6ebac8ae4c50",
 		"97148ba7-a399-4e3e-9aee-1eba34b6d4b8",
 		"3b6d2318-0049-4435-b791-3cac5b7bfabe",
 		"844d8b46-9d0f-4c65-a255-9d60f11560bf",
 		"c4514096-3874-4c29-8128-a886b5181265",
 		"09d8f4ff-56b9-425b-9bb1-db75e1abff80",
-		"3eba47f8-5f3c-4fbf-be46-8c4f3af8d071",
-		"2924772f-54d2-4134-98ac-0999bab95116",
 		"2e8fc1ce-8802-423b-b5f3-8bbfae0a31c1",
 		"d168ebd4-e400-4f63-9529-d7b3a08b5b36",
-		"ad133743-3163-4629-a234-292e9a55cf52"
+		"d57573f9-14b9-49b8-b330-44f03ff40c60",
+		"2f6e84e3-ecbe-4cd5-9abf-657a5bbb59bc",
+		"71bc53c2-2380-4d3d-912a-ca1af8671788",
+		"012d474d-bb29-4bfd-be10-982193ddad9d",
+		"27f39515-6cc5-4817-9fb1-bd71528da25a"
 	],
 	"collapsedTreeItems": [],
 	"reverseStats": {}

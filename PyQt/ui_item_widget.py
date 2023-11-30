@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'designerGiudfA.ui'
+## Form generated from reading UI file 'item_widgetUEYLiY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.8
 ##
@@ -13,14 +13,15 @@ from PySide2.QtGui import *  # type: ignore
 from PySide2.QtWidgets import *  # type: ignore
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        if not Form.objectName():
-            Form.setObjectName(u"Form")
-        Form.resize(497, 50)
-        self.horizontalLayout = QHBoxLayout(Form)
+class Ui_lista_productos_item(object):
+    def setupUi(self, lista_productos_item):
+        if not lista_productos_item.objectName():
+            lista_productos_item.setObjectName(u"lista_productos_item")
+        lista_productos_item.resize(497, 50)
+        lista_productos_item.setStyleSheet(u"background-color: rgb(252, 240, 240);")
+        self.horizontalLayout = QHBoxLayout(lista_productos_item)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.item_indice = QLabel(Form)
+        self.item_indice = QLabel(lista_productos_item)
         self.item_indice.setObjectName(u"item_indice")
         font = QFont()
         font.setFamily(u"Roboto Mono for Powerline")
@@ -33,7 +34,7 @@ class Ui_Form(object):
 
         self.horizontalLayout.addWidget(self.item_indice)
 
-        self.line = QFrame(Form)
+        self.line = QFrame(lista_productos_item)
         self.line.setObjectName(u"line")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
@@ -51,21 +52,21 @@ class Ui_Form(object):
 
         self.horizontalLayout.addWidget(self.line)
 
-        self.item_multiplicador = QLabel(Form)
-        self.item_multiplicador.setObjectName(u"item_multiplicador")
-        self.item_multiplicador.setMinimumSize(QSize(40, 0))
+        self.item_cantidad = QLabel(lista_productos_item)
+        self.item_cantidad.setObjectName(u"item_cantidad")
+        self.item_cantidad.setMinimumSize(QSize(40, 0))
         font2 = QFont()
         font2.setFamily(u"Roboto Mono for Powerline")
         font2.setPointSize(18)
         font2.setBold(False)
         font2.setWeight(50)
-        self.item_multiplicador.setFont(font2)
-        self.item_multiplicador.setStyleSheet(u"border: none;")
-        self.item_multiplicador.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.item_cantidad.setFont(font2)
+        self.item_cantidad.setStyleSheet(u"border: none;")
+        self.item_cantidad.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.horizontalLayout.addWidget(self.item_multiplicador)
+        self.horizontalLayout.addWidget(self.item_cantidad)
 
-        self.item_descripcion = QLabel(Form)
+        self.item_descripcion = QLabel(lista_productos_item)
         self.item_descripcion.setObjectName(u"item_descripcion")
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
@@ -80,7 +81,7 @@ class Ui_Form(object):
 
         self.horizontalLayout.addWidget(self.item_descripcion)
 
-        self.item_subtotal = QLabel(Form)
+        self.item_subtotal = QLabel(lista_productos_item)
         self.item_subtotal.setObjectName(u"item_subtotal")
         sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy2.setHorizontalStretch(0)
@@ -95,23 +96,23 @@ class Ui_Form(object):
 
         self.horizontalLayout.addWidget(self.item_subtotal)
 
-        self.item_multiplicador.raise_()
+        self.item_cantidad.raise_()
         self.item_subtotal.raise_()
         self.item_indice.raise_()
         self.line.raise_()
         self.item_descripcion.raise_()
 
-        self.retranslateUi(Form)
+        self.retranslateUi(lista_productos_item)
 
-        QMetaObject.connectSlotsByName(Form)
+        QMetaObject.connectSlotsByName(lista_productos_item)
     # setupUi
 
-    def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.item_indice.setText(QCoreApplication.translate("Form", u"A", None))
-        self.item_multiplicador.setText(QCoreApplication.translate("Form", u"2X", None))
-        self.item_descripcion.setText(QCoreApplication.translate("Form", u"ACIDO MEFENAMICO 500MG X 10 COM\n"
+    def retranslateUi(self, lista_productos_item):
+        lista_productos_item.setWindowTitle(QCoreApplication.translate("lista_productos_item", u"Form", None))
+        self.item_indice.setText(QCoreApplication.translate("lista_productos_item", u"A", None))
+        self.item_cantidad.setText(QCoreApplication.translate("lista_productos_item", u"2X", None))
+        self.item_descripcion.setText(QCoreApplication.translate("lista_productos_item", u"ACIDO MEFENAMICO 500MG X 10 COM\n"
 " $ 1.500.-", None))
-        self.item_subtotal.setText(QCoreApplication.translate("Form", u"$   3.000", None))
+        self.item_subtotal.setText(QCoreApplication.translate("lista_productos_item", u"$   3.000", None))
     # retranslateUi
 

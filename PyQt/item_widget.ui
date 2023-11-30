@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Producto</class>
+ <widget class="QWidget" name="Producto">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,6 +12,9 @@
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(252, 240, 240);</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -65,7 +68,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="item_multiplicador">
+    <widget class="QLabel" name="item_cantidad">
      <property name="minimumSize">
       <size>
        <width>40</width>
@@ -137,7 +140,7 @@
     </widget>
    </item>
   </layout>
-  <zorder>item_multiplicador</zorder>
+  <zorder>item_cantidad</zorder>
   <zorder>item_subtotal</zorder>
   <zorder>item_indice</zorder>
   <zorder>line</zorder>

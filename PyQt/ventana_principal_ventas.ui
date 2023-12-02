@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>543</width>
+    <width>450</width>
     <height>433</height>
    </rect>
   </property>
@@ -25,14 +25,72 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QListWidget" name="ListaItemsVenta">
-      <property name="focusPolicy">
-       <enum>Qt::NoFocus</enum>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(252, 240, 240);
-border-radius: 15px;</string>
+border-radius: 8px;</string>
       </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>438</width>
+         <height>362</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="item_descripcion">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Roboto Mono Light for Powerline</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ACIDO MEFENAMICO 500MG X 10 COM......&lt;span style=&quot; font-weight:600;&quot;&gt;$ 3.000.-&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2X &lt;/span&gt;$ 1.500.-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
     <item>
@@ -43,6 +101,9 @@ border-radius: 15px;</string>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="toolTip">
+       <string notr="true"/>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(206, 212, 255);
 border-radius: 15px;</string>
@@ -51,7 +112,7 @@ border-radius: 15px;</string>
        <item>
         <widget class="QLabel" name="label">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -63,6 +124,9 @@ border-radius: 15px;</string>
            <weight>75</weight>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
          </property>
          <property name="text">
           <string/>
@@ -77,14 +141,23 @@ border-radius: 15px;</string>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="maximumSize">
+          <size>
+           <width>173</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>Roboto Mono Thin for Powerline</family>
-           <pointsize>29</pointsize>
+           <pointsize>16</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
          </property>
          <property name="styleSheet">
           <string notr="true">border-radius: 15px;
@@ -94,7 +167,10 @@ border: 1px dotted black;</string>
           <string/>
          </property>
          <property name="maxLength">
-          <number>16</number>
+          <number>14</number>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -112,10 +188,13 @@ border: 1px dotted black;</string>
          <property name="font">
           <font>
            <family>Roboto Mono for Powerline</family>
-           <pointsize>19</pointsize>
+           <pointsize>15</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>

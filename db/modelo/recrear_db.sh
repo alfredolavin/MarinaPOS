@@ -5,11 +5,12 @@ if whiptail --yesno "Recrear $database_file?" 8 60 ;then
   rm $database_file
   cat ./MarinaPOS.sql | sqlite3 $database_file
 
-  cd ../datos
-  for file in *.csv
+  for file in ../datos/csv/*.csv
   do
     echo "Agregando $file a $database_file"
-    sqlite3 $database_file ".import --csv --skip 1 $file ${file%%.*}"
+    table_name=${file##*/}
+    table_name=${table_name%%.*}
+    sqlite3 $database_file ".import --csv --skip 1 $file $table_name"
   done
 
   echo "Creando modelo para peewee..."

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
+    <width>453</width>
     <height>433</height>
    </rect>
   </property>
@@ -47,8 +47,8 @@ border-radius: 8px;</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>438</width>
-         <height>362</height>
+         <width>441</width>
+         <height>375</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -60,19 +60,11 @@ border-radius: 8px;</string>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="font">
-           <font>
-            <family>Roboto Mono Light for Powerline</family>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
           <property name="toolTip">
            <string notr="true"/>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ACIDO MEFENAMICO 500MG X 10 COM......&lt;span style=&quot; font-weight:600;&quot;&gt;$ 3.000.-&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2X &lt;/span&gt;$ 1.500.-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;p style=&quot;font:\'Roboto Mono Light for Powerline\'; font-size:11pt; font-weight:200;&quot;&gt;&lt;span style=&quot; font-weight:792;&quot;&gt;&lt;span style=&quot;font-weight:792; color:#ff0000;border-left: 3px;&quot;&gt;A&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ACIDO MEFENAMICO 500MG X 10 COM&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot; font-weight:600;&quot;&gt;$ 3.000.-&lt;/span&gt;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot; font-weight:200;color:#ff0000;&quot;&gt;2X &lt;/span&gt;$ 1.500.-&lt;br /&gt;&lt;/p&gt;</string>
           </property>
          </widget>
         </item>
@@ -120,7 +112,7 @@ border-radius: 15px;</string>
          <property name="font">
           <font>
            <family>Roboto Mono for Powerline</family>
-           <pointsize>26</pointsize>
+           <pointsize>15</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -149,8 +141,8 @@ border-radius: 15px;</string>
          </property>
          <property name="font">
           <font>
-           <family>Roboto Mono Thin for Powerline</family>
-           <pointsize>16</pointsize>
+           <family>Roboto Mono for Powerline</family>
+           <pointsize>15</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>

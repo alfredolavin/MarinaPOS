@@ -5,7 +5,7 @@ if whiptail --yesno "Recrear $database_file?" 8 60 ;then
   rm $database_file
   cat ./MarinaPOS.sql | sqlite3 $database_file
 
-  for file in ../datos/csv/*.csv
+  for file in ../datos/datos_ods/*.csv
   do
     echo "Agregando $file a $database_file"
     table_name=${file##*/}

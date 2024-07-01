@@ -37,6 +37,7 @@ INSTALLED_APPS = [
   "django.contrib.sessions",
   "django.contrib.messages",
   "django.contrib.staticfiles",
+  "inventario.apps.InventarioConfig"
 ]
 
 MIDDLEWARE = [
@@ -74,15 +75,10 @@ WSGI_APPLICATION = "MarinaPOS.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-  "default": {
-    "ENGINE": "firebird",
-    "NAME": "marinapos_firebird.fdb",  # Path to database or db alias
-    "USER": "SYSDBA",  # Your db user
-    "PASSWORD": "cara",  # db user password
-    "HOST": "127.0.0.1",  # Your host machine
-    "PORT": "3050",  # If is empty, use default 3050
-    # 'OPTIONS' : {'charset':'ISO8859_1'}
-  }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3', # '/home/usr/trabajo/la_farmacia/proyectos/MarinaPOS/db/marinapos.db' #BASE_DIR / 'db.sqlite3',
+    }
 }
 
 

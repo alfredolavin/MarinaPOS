@@ -7,6 +7,7 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+
 class lista_nombres(models.Model):
   nombre = models.TextField(unique=True, blank=False, null=False)
 
@@ -14,13 +15,13 @@ class lista_nombres(models.Model):
     return self.nombre
 
   class Meta:
-    abstract=True
+    abstract = True
 
 
 class CategoriaFarmacologica(lista_nombres):
 
   class Meta:
-    db_table = 'categoria_farmacologica'
+    db_table = "categoria_farmacologica"
 
 
 class Cliente(lista_nombres):
@@ -29,76 +30,77 @@ class Cliente(lista_nombres):
   comentarios = models.TextField(blank=True, null=True)
 
   class Meta:
-    db_table = 'cliente'
+    db_table = "cliente"
 
 
 class CodigoDeBarras(models.Model):
-  id = models.TextField(unique=True)
-  producto_id = models.IntegerField()
-  detalle_codigo_barras_id = models.IntegerField()
+  id = models.TextField(primary_key=True)
+  producto = models.ForeignKey("Producto", models.DO_NOTHING)
+  detalle_codigo_barras = models.ForeignKey(
+      "DetalleCodigoBarras", models.DO_NOTHING)
 
   class Meta:
-    db_table = 'codigo_de_barras'
+    db_table = "codigo_de_barras"
 
 
 class DetalleCodigoBarras(models.Model):
-  detalle_producto_id = models.IntegerField()
+  detalle_producto = models.ForeignKey("DetalleProducto", models.DO_NOTHING)
   valor = models.TextField()
 
   class Meta:
-    db_table = 'detalle_codigo_barras'
+    db_table = "detalle_codigo_barras"
 
 
 class DetalleProducto(lista_nombres):
 
   class Meta:
-    db_table = 'detalle_producto'
+    db_table = "detalle_producto"
 
 
 class Documento(models.Model):
-  tipo_documento_id = models.IntegerField()
-  estado_documento_id = models.IntegerField()
-  cliente_id = models.IntegerField()
+  tipo_documento = models.ForeignKey("TipoDocumento", models.DO_NOTHING)
+  estado_documento = models.ForeignKey("EstadoDocumento", models.DO_NOTHING)
+  cliente = models.ForeignKey(Cliente, models.DO_NOTHING)
   momento = models.DateTimeField()
   total_documento = models.IntegerField()
   comentario = models.TextField(blank=True, null=True)
-  turno_id = models.IntegerField()
+  turno = models.ForeignKey("Turno", models.DO_NOTHING)
 
   class Meta:
-    db_table = 'documento'
+    db_table = "documento"
 
 
 class EstadoDocumento(lista_nombres):
 
   class Meta:
-    db_table = 'estado_documento'
+    db_table = "estado_documento"
 
 
 class EstadoMovimiento(lista_nombres):
 
   class Meta:
-    db_table = 'estado_movimiento'
+    db_table = "estado_movimiento"
 
 
 class FormaFarmaceutica(lista_nombres):
-  unidad_de_medida_id = models.IntegerField()
+  unidad_de_medida = models.ForeignKey("UnidadMedida", models.DO_NOTHING)
 
   class Meta:
-    db_table = 'forma_farmaceutica'
+    db_table = "forma_farmaceutica"
 
 
 class Laboratorio(lista_nombres):
 
   class Meta:
-    db_table = 'laboratorio'
+    db_table = "laboratorio"
 
 
 class Movimiento(models.Model):
-  producto_id = models.IntegerField()
-  estado_movimiento_id = models.IntegerField()
-  tipo_movimiento_id = models.IntegerField()
-  documento_id = models.IntegerField()
-  turno_id = models.IntegerField()
+  producto = models.ForeignKey("Producto", models.DO_NOTHING)
+  estado_movimiento = models.ForeignKey(EstadoMovimiento, models.DO_NOTHING)
+  tipo_movimiento = models.ForeignKey("TipoMovimiento", models.DO_NOTHING)
+  documento = models.ForeignKey(Documento, models.DO_NOTHING)
+  turno = models.ForeignKey("Turno", models.DO_NOTHING)
   momento = models.DateTimeField()
   producto_nombre = models.TextField()
   producto_precio = models.IntegerField()
@@ -109,32 +111,42 @@ class Movimiento(models.Model):
   es_salida = models.BooleanField()
 
   class Meta:
-    db_table = 'movimiento'
+    db_table = "movimiento"
 
 
 class Pago(models.Model):
-  tipo_pago_id = models.IntegerField()
-  turno_id = models.IntegerField()
-  documento_id = models.IntegerField()
+  tipo_pago = models.ForeignKey("TipoPago", models.DO_NOTHING)
+  turno = models.ForeignKey("Turno", models.DO_NOTHING)
+  documento = models.ForeignKey(Documento, models.DO_NOTHING)
   monto = models.IntegerField()
 
   class Meta:
-    db_table = 'pago'
+    db_table = "pago"
 
 
 class PrincipioActivo(lista_nombres):
 
   class Meta:
-    db_table = 'principio_activo'
+    db_table = "principio_activo"
 
 
-class Producto(models.Model):
+class Producto(lista_nombres):
   pharmid = models.TextField(blank=True, null=True)
-  laboratorio_id = models.IntegerField(blank=True, null=True)
-  categoria_farmacologica_id = models.IntegerField(blank=True, null=True)
-  forma_farmaceutica_id = models.IntegerField(blank=True, null=True)
-  principio_activo_id = models.IntegerField(blank=True, null=True)
-  tipo_receta_id = models.IntegerField(blank=True, null=True)
+  laboratorio = models.ForeignKey(
+      Laboratorio, models.DO_NOTHING, blank=True, null=True
+  )
+  categoria_farmacologica = models.ForeignKey(
+      CategoriaFarmacologica, models.DO_NOTHING, blank=True, null=True
+  )
+  forma_farmaceutica = models.ForeignKey(
+      FormaFarmaceutica, models.DO_NOTHING, blank=True, null=True
+  )
+  principio_activo = models.ForeignKey(
+      PrincipioActivo, models.DO_NOTHING, blank=True, null=True
+  )
+  tipo_receta = models.ForeignKey(
+      "TipoReceta", models.DO_NOTHING, blank=True, null=True
+  )
   registro_isp = models.TextField(blank=True, null=True)
   es_cenabast = models.BooleanField(blank=True, null=True)
   es_controlado = models.BooleanField(blank=True, null=True)
@@ -144,46 +156,46 @@ class Producto(models.Model):
   cantidad_por_envase = models.IntegerField(blank=True, null=True)
 
   class Meta:
-    db_table = 'producto'
+    db_table = "producto"
 
 
 class ProductoPrecio(models.Model):
-  producto_id = models.IntegerField()
+  producto = models.ForeignKey(Producto, models.DO_NOTHING)
   momento = models.DateTimeField()
-  precio_venta_id = models.IntegerField()
+  precio_venta = models.IntegerField()
   precio_compra = models.IntegerField(blank=True, null=True)
-  turno_id = models.IntegerField()
+  turno = models.ForeignKey("Turno", models.DO_NOTHING)
 
   class Meta:
-    db_table = 'producto_precio'
+    db_table = "producto_precio"
 
 
 class TipoDocumento(lista_nombres):
 
   class Meta:
-    db_table = 'tipo_documento'
+    db_table = "tipo_documento"
 
 
 class TipoMovimiento(lista_nombres):
 
   class Meta:
-    db_table = 'tipo_movimiento'
+    db_table = "tipo_movimiento"
 
 
 class TipoPago(lista_nombres):
 
   class Meta:
-    db_table = 'tipo_pago'
+    db_table = "tipo_pago"
 
 
 class TipoReceta(lista_nombres):
 
   class Meta:
-    db_table = 'tipo_receta'
+    db_table = "tipo_receta"
 
 
 class Turno(models.Model):
-  usuario_id = models.IntegerField()
+  usuario = models.ForeignKey("Usuario", models.DO_NOTHING)
   primer_movimiento = models.DateTimeField()
   monto_caja_inicial = models.IntegerField()
   ultimo_movimiento = models.DateTimeField(blank=True, null=True)
@@ -192,13 +204,13 @@ class Turno(models.Model):
   comentario = models.TextField(blank=True, null=True)
 
   class Meta:
-    db_table = 'turno'
+    db_table = "turno"
 
 
 class UnidadMedida(lista_nombres):
 
   class Meta:
-    db_table = 'unidad_medida'
+    db_table = "unidad_medida"
 
 
 class Usuario(lista_nombres):
@@ -206,4 +218,4 @@ class Usuario(lista_nombres):
   apodo = models.TextField()
 
   class Meta:
-    db_table = 'usuario'
+    db_table = "usuario"

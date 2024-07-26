@@ -11,6 +11,12 @@ if whiptail --yesno "Recrear $database_file?" 8 60 ;then
     table_name=${file##*/}
     table_name=${table_name%%.*}
     sqlite3 $database_file ".import --csv --skip 1 $file $table_name"
+      temp_IFS=$IFS
+      IFS=","; for c in $(head -n1 $file)
+      do
+        sqlite3 $database_file "UPDATE $table_name SET $c = NULL where $c = \"NULL\""
+      done
+      IFS=$temp_IFS
   done
 
   echo "Creando modelo para peewee..."

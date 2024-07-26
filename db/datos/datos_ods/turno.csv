@@ -1,0 +1,2 @@
+id,usuario_id,primer_movimiento,monto_caja_inicial,ultimo_movimiento,monto_caja_final,monto_caja_final_real,comentario
+0,0,,0,,0,0,Priner comit a la bd

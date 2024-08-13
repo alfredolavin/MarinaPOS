@@ -1,0 +1,306 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>MarinaPOS</title>
+
+  <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+  <style>
+    #code,
+    #codeIn {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      box-sizing: border-box;
+      text-align: center;
+      display: block;
+      font-size: 2em;
+      font-family: "Fira Code", Tahoma, sans-serif;
+      width: 100%;
+      white-space: pre;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      overflow: hidden;
+    }
+
+    #code {
+      user-select: none;
+    }
+
+    #codeIn {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background: transparent;
+      color: transparent;
+      caret-color: black;
+      resize: none;
+    }
+
+    /* THEME */
+    .cantidad {
+      color: blue;
+      font-style: bold;
+    }
+
+    .X {
+      color: black;
+      font: bold;
+    }
+
+    .codigo {
+      color: black;
+    }
+
+    .signo_peso {
+      color: red;
+    }
+
+    .precio {
+      color: #f0f;
+      font-style: bold;
+    }
+
+    .slash {
+      color: #f00;
+      font-style: bold;
+    }
+
+    .comando {
+      color: #000;
+      font-style: italic;
+    }
+
+    #marina_titulo{
+      -webkit-text-stroke: 1px white;
+      text-shadow: #555 1px 0 5px;
+    }
+
+    /*#logos{
+      place-content: end center;
+      display: flex;
+      place-items: initial;
+    }*/
+    
+    /* Let's get this party started */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background: rgb(255, 248, 248);
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+      background: rgba(255, 0, 0, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="relative flex flex-col min-h-screen px-10 py-10 overflow-hidden select-none bg-gray-50 sm:py-12 "
+    x-data="{multiplicador  : 1, productos:[ { 'precio_original': 4900, 'precio_modificado': 3900, 'cantidad': 1, 'nombre': 'IBUPROFENO FORTE 200MG/5ML × 100 ML' }, { 'precio_original': '2000', 'precio_modificado': 2000, 'cantidad': 2, 'nombre': 'NAPROXENO SODIO 550MG × 10 COM' }, { 'precio_original': 1900, 'precio_modificado': 1900, 'cantidad': 1, 'nombre': 'MANTECA DE CACAO COCO' }, { 'precio_original': 2900, 'precio_modificado': 3900, 'cantidad': 1, 'nombre': 'DISILDEN (SILDNFIL) 50MG × 3COM'}], total : 0}">
+    <img src="https://play.tailwindcss.com/img/beams.jpg" alt=""
+      class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-none" width="1308" />
+    <div class="relative px-8 py-5 bg-white shadow-xl min-h-max ring-1 ring-gray-900/5 sm:mx-3 sm:max-w-none sm:rounded-lg sm:px-5">
+      <div id="logos" class="flex itemsv.0-center justify-center my-6 align-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="61.1" height="62.9" viewBox="0 0 16.2 16.6"><g transform="translate(-185 -164.8)"><ellipse cx="193" cy="173.1" fill="#fff" rx="8.1" ry="8.3"/><path fill="#009cf0" d="m192 175.6-.1-.4-.1-.5v-.3l-.1-.4c-.1-.2-.1-.2-.2-.1v1.1c.1.4 0 .5-.1.5-.2 0-.2-.3-.3-1.2 0-1-.2-1.9-.4-1.9s-.3-.2-.4-.4l-.4-1.3-.6-.3-.1.4.1.5c.2.4.3.8.4 1.9a16.9 16.9 0 0 0 .5 2.2v.3h-4.4l-.2-.2c-.3-.2-.3-.3-.3-2.7l.1-2.2.2-.2c.2-.2.3-.2 2.4-.2h2.1V168c0-2.2 0-2.3.2-2.5l.3-.2 2.2-.1a8 8 0 0 1 2.3 0l.4.3v3.5l-.2.5a297 297 0 0 0-1.7 2.3v-.5c0-.6 0-1.3.3-2s.3-1.2.1-1.4h-.5l-.5 1.2-.6 2c-.1.3-.5 0-.5 0 .4 0 .9.2 1.2.5l.9.5.6.5c0 .2-.4.2-1 0-.3-.2-.7-.3-.7-.2l.7 1.3.5.8c.2.3.2.5 0 .6l-.3-.1c0-.2-.3-.5-.5-.8-.4-.5-.6-.7-.6-.4l.2.7.1.3.2.5-.1.5c-.2 0-.3-.1-.4-.3 0 0 0-.5-.2-.8-.2-.7-.2-.9-.3-.8-.1 0-.1.1 0 .4l.2 1.4c-.1.1-.3.1-.4 0z"/><path fill="#ff7f2a" d="M194.6 172.3c0-.2 0-.5.7-1.3l.5-.8h.9l-.4.6-.6.8c-.3.4-.7.7-.9.7h-.2zm-4.2 8.7-.1-.1.3-.7a21 21 0 0 1 1.8-2.8l.4-.2c.4 0 1-.2 1.5-.8.3-.3.7-.7.8-1 .4-.6.7-.8 1.4-1.3l1.8-1.6s.1-.2 0-.4l-.1-.2-.4.2a21 21 0 0 1-2 1.3c-.1 0-.1-.2 0-.4l1.1-1.7.6-.8.2-.3h1.3c1.4 0 1.4 0 1.7.4l.1 2.4-.1 2.3-.3.3H198l-2.4.1v4.9c-.3.4-.2.4-2.8.4h-2.4z"/></g></svg>
+        <p class="pl-4"><span id="marina_titulo" class="text-5xl font-bold text-center ">MarinaPOS</span><span id="marina_titulo_venta" class="text-2xl italic text-right"><br>venta</span></p>
+      </div>
+      <p class="absolute font-bold text-right text-green-400 top-2 right-5">Diego ⬤</p>
+      <div class="flex items-center justify-center mb-3">
+        <p class="text-slate-700 uppercase text-right w-[2em] align-middle text-3xl my-auto pr-4" x-text="(multiplicador>1)?multiplicador + '×':''"></p>
+        <div class="rounded-lg  w-3/5 h-[3rem] relative align-middle shadow-[0_0px_8px_4px_rgba(0,0,0,0.1)]">
+          <code id="code"></code>
+          <input id="codeIn" @blur="$el.focus()" placeholder="Escanear o buscar" maxlength="32"
+            class="font-mono text-center uppercase align-middle rounded-lg placeholder:text-slate-200 placeholder:lowercase placeholder:italic placeholder:text-2xl placeholder:align-top"
+            @blur="$el.focus()" @multi_key_up="console.log($event)" @multikeyup3="console.log('escape')" @keyup.enter="val = Number($el.value)||1; multiplicador=(1<val<20)?val:1" >
+        </div>
+      </div>
+      <p id="" class="text-red-400 text-[1em] mb-2 drop-shadow-md">Ingrese productos venta #14:</p>
+      <ul role="list" class="rounded-lg max-h-max overflow-y-[auto] overflow-x-hidden item-align-center"
+        data-empty-message="Sin productos">
+        <template x-if="productos.length==0">
+          <p class="text-center">Lista vacía.</p>
+        </template>
+        <template x-for='(producto, index) in productos'>
+          <li class="flex h-full px-4 py-1 first:pt-0 odd:bg-[rgb(255,248,248)] even:bg-[rgb(255,243,243)]">
+            <p class="flex-initial w-5 my-auto text-left text-red-400 uppercase" x-text="String.fromCharCode('A'.charCodeAt(0)+index)"></p>
+            <p class="text-slate-700 uppercase text-[1.4em] text-right w-[0.8em] my-auto flex-initial"
+              x-text="(producto.cantidad>1)?(producto.cantidad+'×'):''"></p>
+            <div class="flex-grow pl-5">
+              <p class="text-[1em] fo text-black uppercase" x-text="producto.nombre"></p>
+              <div class="flex *:px-2">
+                <p class="text-sm text-slate-500"
+                  :class="{ 'line-through': producto.precio_original!= producto.precio_modificado}"
+                  x-text="as_currency(producto.precio_original)"></p>
+                <p class="text-sm "
+                  :class="{ 'text-red-500': producto.precio_original > producto.precio_modificado, 'text-blue-500': producto.precio_original < producto.precio_modificado}"
+                  x-text="(producto.precio_original!=producto.precio_modificado)?as_currency(producto.precio_modificado):''">
+                </p>
+              </div>
+            </div>
+            <p class="text-lg text-right text-purple-500 align-middle mono"
+              x-init="subtotal=producto.precio_modificado*producto.cantidad; total += subtotal"
+              x-text="as_currency(subtotal)"></p>
+          </li>
+        </template>
+      </ul>
+      <p class="divide-dotted py-4 w-full text-purple-700 align-middle text-center text-[1.6em] "
+        x-text="as_currency(total)"></p>
+      <p id="instrucciones" class="mx-auto  text-[#AAA] drop-shadow align-middle text-center text-[0.8em]"></p>
+    </div>
+  </div>
+</body>
+<script>
+  function load() {
+    var file = new XMLHttpRequest();
+    console.log("Intentado cargar instrucciones.txt");
+    file.open("GET", "instrucciones.txt", true);
+    file.onreadystatechange = function () {
+      console.log("On load recibido");
+      if (file.readyState === 4) {  // Makes sure the document is ready to parse
+        if (file.status === 200) {  // Makes sure it's found the file
+          instrucciones.innerHTML = file.responseText;
+        }
+        else{
+          console.log("Error al cargar instrucciones.txt");
+        }
+      }
+    }
+  }
+
+  window.onLoad = load();
+</script>
+<script>
+  let is_barcode_enter;
+  let last_key_barcode_reader;
+
+  const is_barcode_reader_timeout = () => setTimeout(() => { is_barcode_enter = false }, 400);
+
+  const keyPress_is_barcode_reader = e => {
+    
+    if (is_barcode_enter == true && e.key === 'Enter' && last_key_barcode_reader != 'Enter') {
+      my_e = new CustomEvent("barcode_enter" + times, {bubbles: true });
+      my_e.key = e.key;
+      my_e.keyCode = e.keyCode; 
+      my_e.code = e.code; 
+      window.dispatchEvent(my_e);
+    } else {
+      is_barcode_enter = true;
+      is_barcode_reader_timeout();
+    }
+
+    last_key_barcode_reader = e.key;
+  }
+
+  codeIn.onkeyup = key => keyPress_is_barcode_reader(key);
+</script>
+<script>
+  let pressed;
+  let lastPressed;
+  let isManyPress;
+  let times = 1;
+
+  const timeOut = () => setTimeout(() => { isManyPress = false; times = 1; }, 500);
+
+  const keyPress = e => {
+    pressed = e.keyCode;
+
+    if (isManyPress && pressed === lastPressed) {
+      times++;
+      my_e = new CustomEvent("multi_key_up" + times, {bubbles: true, detail: {times: times } });
+      my_e.key = e.key;
+      my_e.keyCode = e.keyCode; 
+      my_e.code = e.code; 
+      window.dispatchEvent(my_e);
+    } else {
+      isManyPress = true;
+      timeOut();
+    }
+
+    lastPressed = pressed;
+  }
+
+  window.onkeyup = e => keyPress(e);
+</script>
+<script>
+  function as_currency(numero) {
+    const agrupado = numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    const padded = agrupado.padStart(8, "\u00A0");
+    return "$" + padded;
+  }  
+</script>
+<script>
+  const mini_syntax = [
+    {
+      're': /^(\s*)(\d+)(\s*)(X)(\s*)(\w+)(\s*)(\$)(\s*)(\d+)(\s*)$/gi,
+      'con': "$1<span class='cantidad'>$2</span>$3<span class='X'>×</span>$5<span class='codigo'>$6</span>$7<span class='signo_peso'>$8</span>$9<span class='precio'>$10</span>$11"
+    },
+
+    {
+      're': /^\/(\w+)/gi,
+      'con': "<span class='slash'>/</span><span class='comando'>$1</span>"
+    },
+
+    {
+      're': /^(\s*)(\d+)(\s*)([X\*])(\s*)(\w+)(\s*)/gi,
+      'con': "$1<span class='cantidad'>$2</span>$3<span class='X'>×</span>$5<span class='codigo'>$6</span>$7"
+    }];
+
+  function hilite(e) {
+    var str = codeIn.value;
+    const orig = str;
+
+    mini_syntax.forEach(
+      (m) => {
+        str = str.replace(m.re, m.con);
+        if (str != orig) {
+          code.innerHTML = str;
+          return;
+        }
+      });
+    code.innerHTML = str;
+  }
+  codeIn.oninput = hilite;
+</script>
+<script>
+  let estado = 'ingresando'
+
+  const enterTresVecesPresionado = (el, ) => {
+    
+  }
+  
+  
+  const enterPresionado = (el) => {
+    const valor = el.value;
+    el.value = ''
+    
+    switch(estado){
+      case 'ingresando':
+        database.
+      break;
+      
+    }
+    
+  }
+
+</script>
+
+</html>

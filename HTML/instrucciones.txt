@@ -1,0 +1,1 @@
+Presione Enter 2 vecesseguidas para finalizar la venta, Ponga un signo menos (-) y luego enter para eliminar el último producto, o unsigno menos y escanée el código a eliminar, o un signo menos y el número de línea que desea borrar paraeliminarlode la lista. Presiones Esc tres veces para borrar todos los productos

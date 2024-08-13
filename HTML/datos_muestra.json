@@ -1,0 +1,26 @@
+[
+  {
+    "precio_original": 4900,
+    "precio_modificado": 3900,
+    "cantidad": 1,
+    "nombre": "IBUPROFENO FORTE 200MG/5ML X 100 ML"
+  },
+  {
+    "precio_original": 2000,
+    "precio_modificado": 2000,
+    "cantidad": 2,
+    "nombre": "NAPROXENO SODIO 550MG X 10 COM"
+  },
+  {
+    "precio_original": 1900,
+    "precio_modificado": 1900,
+    "cantidad": 1,
+    "nombre": "MANTECA DE CACAO COCO"
+  },
+  {
+    "precio_original": 2900,
+    "precio_modificado": 2800,
+    "cantidad": 1,
+    "nombre": "DISILDEN 50 MG 3 COMP.REC. [BE]"
+  }
+]
